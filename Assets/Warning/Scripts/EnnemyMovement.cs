@@ -39,7 +39,8 @@ public class EnnemyMovement : MonoBehaviour {
     private void Chase()
     {
         Vector3 playerDirection = player.position - this.transform.position;
-        this.transform.Translate(playerDirection * Time.deltaTime);
+        if(Vector3.Distance(player.position, this.transform.position) > 2.0f) 
+            this.transform.Translate(playerDirection * Time.deltaTime);
     }
 
     private void CheckForPlayer()
