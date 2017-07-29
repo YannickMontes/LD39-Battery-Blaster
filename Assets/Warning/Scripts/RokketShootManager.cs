@@ -4,54 +4,44 @@ using UnityEngine;
 
 public class RokketShootManager : MonoBehaviour {
 	public float energyCost = 10f;
-	public float damage = 50f;
-	public float range = 60f;
+
+	public Rigidbody grenadeRB;
+	public float grenadeLaunchPower = 10;
 
 	public ParticleSystem flash;
-	public GameObject impactEffect;
 
+	bool isCoroutineActive = false;
 
 	public Camera fpsCamera;
 
-	public float delay = 1f;
-
+	public float delay = 5f;
 
 
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Fire2")){
+		if(Input.GetButtonDown("Fire2")  && !isCoroutineActive){
 			StartCoroutine(StartShooting());
 		}	
-
-
 	}
 
 	IEnumerator StartShooting() {
-
-		while (Input.GetButton("Fire2")) {
+		isCoroutineActive = true;
+		while (Input.GetButton("Fire2") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			Shoot ();
 			yield return new WaitForSeconds(delay);
 		}
+		isCoroutineActive = false;
 	}
 
 	void Shoot(){
 		flash.Play ();
-
 		Terminator.GetTerminator ().DecreaseEnergy (energyCost);
 
-		RaycastHit hitPoint;
-		if (Physics.Raycast (fpsCamera.transform.position, fpsCamera.transform.forward, out hitPoint, range)) {
-			Target target = hitPoint.transform.GetComponent<Target> ();
-			if (target != null) {
-				target.TakeDamage (damage);
-			}
-
-			GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
-			Destroy (impactGO, 2);
-		}
-
+		Rigidbody grenade = Instantiate (grenadeRB,transform.position,transform.rotation);
+		grenade.velocity = transform.TransformDirection (Vector3.forward * grenadeLaunchPower);
 	}
+		
 
 
 }

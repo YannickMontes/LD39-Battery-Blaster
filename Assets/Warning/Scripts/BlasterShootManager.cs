@@ -18,7 +18,7 @@ public class BlasterShootManager : MonoBehaviour {
 	int ParticleSystemIndex= 0;
 	public float delay = 0.3f;
 
-
+	bool isCoroutineActive = false;
 
 
 	void Start(){
@@ -31,19 +31,18 @@ public class BlasterShootManager : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Fire1")){
+		if(Input.GetButtonDown("Fire1")  && !isCoroutineActive){
 			StartCoroutine(StartShooting());
-		}	
-				
-				
+		}					
 	}
 
 	IEnumerator StartShooting() {
-		
-		while (Input.GetButton("Fire1")) {
+		isCoroutineActive = true;
+		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			Shoot ();
 			yield return new WaitForSeconds(delay);
 		}
+		isCoroutineActive = false;
 	}
 
 	void Shoot(){
