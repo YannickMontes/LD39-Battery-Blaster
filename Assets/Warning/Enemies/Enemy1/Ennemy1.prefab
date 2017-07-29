@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 65264036355932056}
   - component: {fileID: 23970726314119752}
   - component: {fileID: 114212335354713414}
+  - component: {fileID: 114771434081278424}
   m_Layer: 0
   m_Name: Ennemy1
   m_TagString: Ennemy
@@ -122,3 +123,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &114771434081278424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1115032502581990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b2ad9d50ede394d92804159f8b13ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  onlyChase: 0
