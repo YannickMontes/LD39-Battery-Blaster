@@ -142,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757123397141730}
   - component: {fileID: 114049489441767082}
+  - component: {fileID: 114062632132020128}
   m_Layer: 0
   m_Name: Blaster
   m_TagString: Untagged
@@ -798,6 +799,29 @@ MonoBehaviour:
     type: 2}
   listParticles: []
   fpsCamera: {fileID: 20555525725935846}
+  delay: 0.2
+--- !u!114 &114062632132020128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401011197463508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  range: 100
+  flash_UL: {fileID: 198384384213302724}
+  flash_UR: {fileID: 198986407977884422}
+  flash_LL: {fileID: 198767806886680054}
+  flash_LR: {fileID: 198318621497327014}
+  impactEffect: {fileID: 1680058025826580, guid: 2ec61f632227dab4e8b318b335b4d88a,
+    type: 2}
+  listParticles: []
+  fpsCamera: {fileID: 20555525725935846}
+  delay: 0.2
 --- !u!114 &114532892152660650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -917,6 +941,7 @@ MonoBehaviour:
   energy:
     currentValue: 100
     maxValue: 100
+  radarRadius: 0
   isAlive: 0
 --- !u!114 &114785959264673526
 MonoBehaviour:

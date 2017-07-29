@@ -14,6 +14,8 @@ public class ShootManager : MonoBehaviour {
 	public List<ParticleSystem> listParticles;
 	public Camera fpsCamera;
 	int ParticleSystemIndex= 0;
+	public float delay = 0.3f;
+
 
 	void Start(){
 		listParticles = new List<ParticleSystem> ();
@@ -26,13 +28,19 @@ public class ShootManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Fire1")){
-			Shoot();
+			StartCoroutine(StartShooting());
+		}			
+	}
+
+	IEnumerator StartShooting() {
+		
+		while (Input.GetButton("Fire1")) {
+			Shoot ();
+			yield return new WaitForSeconds(delay);
 		}
-			
 	}
 
 	void Shoot(){
-		
 		listParticles[ParticleSystemIndex].Play ();
 
 		if (ParticleSystemIndex < listParticles.Count-1)
@@ -44,15 +52,13 @@ public class ShootManager : MonoBehaviour {
 
 		RaycastHit hitPoint;
 		if (Physics.Raycast (fpsCamera.transform.position, fpsCamera.transform.forward, out hitPoint, range)) {
-			Debug.Log (hitPoint.transform.name);
-
 			Target target = hitPoint.transform.GetComponent<Target> ();
 			if (target != null) {
 				target.TakeDamage (damage);
 			}
 
 			GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
-			//Destroy (impactGO, 2);
+			Destroy (impactGO, 2);
 		}
 
 	}
