@@ -6,7 +6,7 @@ public class EnnemyMovement : MonoBehaviour {
 
     private Transform player;
 
-    public int moveSpeed;
+    public int moveSpeed = 5;
     public bool onlyChase;
     private bool isChasing;
 
@@ -18,7 +18,6 @@ public class EnnemyMovement : MonoBehaviour {
 	void Start ()
     {
         isChasing = false;
-        moveSpeed = 5;
         this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         this.direction = 1;
         this.destination = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
@@ -40,11 +39,13 @@ public class EnnemyMovement : MonoBehaviour {
         else
             moving = MoveNormaly();
         this.LookAtDirection(moving, 1.0f);
-        Debug.Log(Vector3.Distance(player.position, this.transform.position));
-        if (Vector3.Distance(player.position, this.transform.position) > 20.0f)
+        if (Vector3.Distance(player.position, this.transform.position) > 10.0f)
         {
             this.GetComponent<Rigidbody>().MovePosition(transform.position + (moving * Time.deltaTime * moveSpeed));
-            Debug.Log("Dans le if");
+        }
+        else
+        {
+            this.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 
