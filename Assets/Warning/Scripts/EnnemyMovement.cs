@@ -7,7 +7,7 @@ public class EnnemyMovement : MonoBehaviour {
     private Transform player;
 
     public int moveSpeed;
-
+    public bool onlyChase;
     private bool isChasing;
 
     private int direction;
@@ -35,7 +35,7 @@ public class EnnemyMovement : MonoBehaviour {
     private void Move()
     {
         Vector3 moving;
-        if (isChasing)
+        if (isChasing || onlyChase)
             moving = Chase();
         else
             moving = MoveNormaly();
