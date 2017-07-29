@@ -6,10 +6,23 @@ public class ShootManager : MonoBehaviour {
 
 	public float damage = 10f;
 	public float range = 100f;
-	public ParticleSystem flash;
-
+	public ParticleSystem flash_UL;
+	public ParticleSystem flash_UR;
+	public ParticleSystem flash_LL;
+	public ParticleSystem flash_LR;
+	public GameObject impactEffect;
+	public List<ParticleSystem> listParticles;
 	public Camera fpsCamera;
+	int ParticleSystemIndex= 0;
+
+	void Start(){
+		listParticles = new List<ParticleSystem> ();
+		listParticles.Add (flash_UL);
+		listParticles.Add (flash_UR);
+		listParticles.Add (flash_LL);
+		listParticles.Add (flash_LR);
 	
+	}
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Fire1")){
@@ -19,7 +32,14 @@ public class ShootManager : MonoBehaviour {
 	}
 
 	void Shoot(){
-		flash.Play ();
+		
+		listParticles[ParticleSystemIndex].Play ();
+
+		if (ParticleSystemIndex < listParticles.Count-1)
+			ParticleSystemIndex++;
+		else
+			ParticleSystemIndex = 0;
+
 
 
 		RaycastHit hitPoint;
@@ -30,6 +50,9 @@ public class ShootManager : MonoBehaviour {
 			if (target != null) {
 				target.TakeDamage (damage);
 			}
+
+			GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
+			//Destroy (impactGO, 2);
 		}
 
 	}

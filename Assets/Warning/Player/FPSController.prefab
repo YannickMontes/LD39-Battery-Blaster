@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 33944741848869106}
   - component: {fileID: 136551312731373168}
   - component: {fileID: 23971298794339338}
-  - component: {fileID: 114843135289773840}
   m_Layer: 0
   m_Name: Blaster_UL
   m_TagString: Untagged
@@ -92,7 +91,7 @@ GameObject:
   - component: {fileID: 198767806886680054}
   - component: {fileID: 199538376488675966}
   m_Layer: 0
-  m_Name: Blaster Particle System UR
+  m_Name: Blaster Particle System LL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,7 +108,6 @@ GameObject:
   - component: {fileID: 33226746529255620}
   - component: {fileID: 136980440203366546}
   - component: {fileID: 23591416831850220}
-  - component: {fileID: 114652672553548802}
   m_Layer: 0
   m_Name: Blaster_LR
   m_TagString: Untagged
@@ -128,7 +126,6 @@ GameObject:
   - component: {fileID: 33399516407204646}
   - component: {fileID: 136807234679046738}
   - component: {fileID: 23085188655686862}
-  - component: {fileID: 114839764585541416}
   m_Layer: 0
   m_Name: Blaster_UR
   m_TagString: Untagged
@@ -144,6 +141,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4757123397141730}
+  - component: {fileID: 114049489441767082}
   m_Layer: 0
   m_Name: Blaster
   m_TagString: Untagged
@@ -269,7 +267,6 @@ GameObject:
   - component: {fileID: 33499849041095414}
   - component: {fileID: 136338776982058964}
   - component: {fileID: 23695018021967118}
-  - component: {fileID: 114646034956677654}
   m_Layer: 0
   m_Name: Blaster_LL
   m_TagString: Untagged
@@ -780,6 +777,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114049489441767082
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401011197463508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  range: 100
+  flash_UL: {fileID: 198384384213302724}
+  flash_UR: {fileID: 198986407977884422}
+  flash_LL: {fileID: 198767806886680054}
+  flash_LR: {fileID: 198318621497327014}
+  impactEffect: {fileID: 1680058025826580, guid: 2ec61f632227dab4e8b318b335b4d88a,
+    type: 2}
+  listParticles: []
+  fpsCamera: {fileID: 20555525725935846}
 --- !u!114 &114532892152660650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -882,36 +900,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
---- !u!114 &114646034956677654
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1956771833756192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  flash: {fileID: 198767806886680054}
-  fpsCamera: {fileID: 20555525725935846}
---- !u!114 &114652672553548802
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1294179808578720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  flash: {fileID: 198318621497327014}
-  fpsCamera: {fileID: 20555525725935846}
 --- !u!114 &114711218809862774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -944,36 +932,6 @@ MonoBehaviour:
   gIsDown: 0
   rollingFaceLimit: 0
   energyGain: 0
---- !u!114 &114839764585541416
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1319397884386780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  flash: {fileID: 198986407977884422}
-  fpsCamera: {fileID: 20555525725935846}
---- !u!114 &114843135289773840
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1067561100204116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  range: 100
-  flash: {fileID: 198384384213302724}
-  fpsCamera: {fileID: 20555525725935846}
 --- !u!124 &124798439432219974
 Behaviour:
   m_ObjectHideFlags: 1
@@ -4323,7 +4281,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1170824218
+  randomSeed: -1386980266
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7537,7 +7495,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1872768708
+  randomSeed: 163791090
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10751,7 +10709,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -87443773
+  randomSeed: 74824669
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -20393,7 +20351,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -130600678
+  randomSeed: -460713062
   InitialModule:
     serializedVersion: 3
     enabled: 1
