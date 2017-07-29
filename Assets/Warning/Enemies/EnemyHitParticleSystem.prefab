@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 198060401159894330}
   - component: {fileID: 199638374621340772}
   m_Layer: 0
-  m_Name: EnnemyHitParticleSystem
+  m_Name: EnemyHitParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
