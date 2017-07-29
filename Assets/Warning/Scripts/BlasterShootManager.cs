@@ -2,19 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShootManager : MonoBehaviour {
-
+public class BlasterShootManager : MonoBehaviour {
+	public float energyCostPerSec = 0.8f;
 	public float damage = 10f;
 	public float range = 100f;
+
 	public ParticleSystem flash_UL;
 	public ParticleSystem flash_UR;
 	public ParticleSystem flash_LL;
 	public ParticleSystem flash_LR;
 	public GameObject impactEffect;
 	public List<ParticleSystem> listParticles;
+
 	public Camera fpsCamera;
 	int ParticleSystemIndex= 0;
 	public float delay = 0.3f;
+
+
 
 
 	void Start(){
@@ -29,7 +33,9 @@ public class ShootManager : MonoBehaviour {
 	void Update () {
 		if(Input.GetButtonDown("Fire1")){
 			StartCoroutine(StartShooting());
-		}			
+		}	
+				
+				
 	}
 
 	IEnumerator StartShooting() {
@@ -48,7 +54,7 @@ public class ShootManager : MonoBehaviour {
 		else
 			ParticleSystemIndex = 0;
 
-
+		Terminator.GetTerminator ().DecreaseEnergy (energyCostPerSec);
 
 		RaycastHit hitPoint;
 		if (Physics.Raycast (fpsCamera.transform.position, fpsCamera.transform.forward, out hitPoint, range)) {

@@ -7,23 +7,28 @@ public class Terminator : MonoBehaviour
     public Stat hp;
     public Stat energy;
     public float radarRadius;
+	static Terminator TerminatorCurrent;
 
     public bool isAlive;
 
 	void Start ()
     {
-
+		TerminatorCurrent = this;
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
     {
-        DecreaseEnergy(); 
+      
 	}
 
-    private void DecreaseEnergy()
+	public static Terminator GetTerminator(){
+		return TerminatorCurrent;
+	}
+
+	public void DecreaseEnergy(float energyCost)
     {
-        this.energy.CurrentValue -= 1f;
+		this.energy.CurrentValue -= energyCost;
     }
 
     private void CheckForEnnemies()
