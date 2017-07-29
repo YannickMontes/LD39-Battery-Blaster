@@ -6,6 +6,7 @@ public class Terminator : MonoBehaviour
 {
     public Stat hp;
     public Stat energy;
+    public float radarRadius;
 
     public bool isAlive;
 
@@ -23,6 +24,20 @@ public class Terminator : MonoBehaviour
     private void DecreaseEnergy()
     {
         this.energy.CurrentValue -= 1f;
+    }
+
+    private void CheckForEnnemies()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(this.transform.position, 20.0f);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            if (hitColliders[i].tag == "Ennemy")
+            {
+                return;
+            }
+            i++;
+        }
     }
 
     void OnGUI()
