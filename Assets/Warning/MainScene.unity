@@ -3690,7 +3690,7 @@ MonoBehaviour:
   flash: {fileID: 5956632}
   impactEffect: {fileID: 5956630}
   fpsCamera: {fileID: 1427637350}
-  delay: 1
+  delay: 2
 --- !u!198 &559870351 stripped
 ParticleSystem:
   m_PrefabParentObject: {fileID: 198945285760393342, guid: db3a4da27e01afa4daf1460887abd2bb,
@@ -7444,6 +7444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  onlyChase: 0
 --- !u!1 &1427637348
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,6 +7651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  onlyChase: 0
 --- !u!1 &1730323033
 GameObject:
   m_ObjectHideFlags: 0
