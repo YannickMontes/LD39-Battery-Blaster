@@ -38,7 +38,8 @@ public class EnnemyMovement : MonoBehaviour {
 
     private void Chase()
     {
-
+        Vector3 playerDirection = player.position - this.transform.position;
+        this.transform.Translate(playerDirection * Time.deltaTime);
     }
 
     private void CheckForPlayer()
@@ -52,6 +53,7 @@ public class EnnemyMovement : MonoBehaviour {
                 isChasing = true;
                 return;
             }
+            i++;
         }
         isChasing = false;
     }
