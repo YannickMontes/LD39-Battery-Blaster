@@ -33,7 +33,8 @@ public class EnnemySpawner : MonoBehaviour {
             {
                 GameObject en = Instantiate(ennemy);
                 en.GetComponent<EnnemyMovement>().onlyChase = true;
-                en.transform.position = this.transform.position;
+                en.transform.position = new Vector3(this.transform.position.x, 2.0f, this.transform.position.z);
+                en.transform.LookAt(Terminator.GetTerminator().transform);
             }
             currentGeneration++;
         }
