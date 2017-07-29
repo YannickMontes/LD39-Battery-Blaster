@@ -3685,10 +3685,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyCost: 10
-  damage: 50
-  range: 60
+  grenadeRB: {fileID: 54126593961611380, guid: 5516d6e6f1cb6ff40b5547e27463eac7, type: 2}
+  grenadeLaunchPower: 10
   flash: {fileID: 5956632}
-  impactEffect: {fileID: 5956630}
   fpsCamera: {fileID: 1427637350}
   delay: 1
 --- !u!198 &559870351 stripped
@@ -7444,6 +7443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  onlyChase: 0
 --- !u!1 &1427637348
 GameObject:
   m_ObjectHideFlags: 0
@@ -7650,6 +7650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
+  onlyChase: 0
 --- !u!1 &1730323033
 GameObject:
   m_ObjectHideFlags: 0
