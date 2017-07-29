@@ -481,9 +481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1115032502581990, guid: 86f81726bb1345a408123ff5b91f0669, type: 2}
+  ennemy: {fileID: 1594106653505636, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 10
+  maxGeneration: 0
   currentGeneration: 0
 --- !u!1 &340457374
 GameObject:
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1115032502581990, guid: 86f81726bb1345a408123ff5b91f0669, type: 2}
+  ennemy: {fileID: 1594106653505636, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 10
+  maxGeneration: 0
   currentGeneration: 0
 --- !u!1 &370058356
 GameObject:
@@ -955,9 +955,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1115032502581990, guid: 86f81726bb1345a408123ff5b91f0669, type: 2}
+  ennemy: {fileID: 1594106653505636, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 10
+  maxGeneration: 0
   currentGeneration: 0
 --- !u!1 &1159900286
 GameObject:
@@ -1463,9 +1463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1115032502581990, guid: 86f81726bb1345a408123ff5b91f0669, type: 2}
+  ennemy: {fileID: 1594106653505636, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 10
+  maxGeneration: 1
   currentGeneration: 0
 --- !u!1 &1977478740
 GameObject:
