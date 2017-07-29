@@ -39,8 +39,13 @@ public class EnnemyMovement : MonoBehaviour {
             moving = Chase();
         else
             moving = MoveNormaly();
-        if (Vector3.Distance(player.position, this.transform.position) > 2.0f)
-            this.GetComponent<Rigidbody>().MovePosition(transform.position + moving * Time.deltaTime * moveSpeed);
+        this.LookAtDirection(moving, 1.0f);
+        Debug.Log(Vector3.Distance(player.position, this.transform.position));
+        if (Vector3.Distance(player.position, this.transform.position) > 20.0f)
+        {
+            this.GetComponent<Rigidbody>().MovePosition(transform.position + (moving * Time.deltaTime * moveSpeed));
+            Debug.Log("Dans le if");
+        }
     }
 
     private Vector3 MoveNormaly()
@@ -93,5 +98,10 @@ public class EnnemyMovement : MonoBehaviour {
             i++;
         }
         isChasing = false;
+    }
+
+    private void LookAtDirection(Vector3 direction, float rotationSpeed)
+    {
+        this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(direction), rotationSpeed);
     }
 }
