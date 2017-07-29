@@ -22,12 +22,12 @@ public class Terminator : MonoBehaviour
 
     private void DecreaseEnergy()
     {
-        this.energy.CurrentValue -= 0.01f;
+        this.energy.CurrentValue -= 1f;
     }
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 20), "HP: "+this.hp.CurrentValue);
-        GUI.Label(new Rect(10, 30, 200, 20), "ENERGY: " + this.energy.CurrentValue);
+        GUI.Label(new Rect(20, 10, 100, 20), "HP: "+this.hp.CurrentValue);
+        GUI.Label(new Rect(20, 30, 200, 20), "ENERGY: " + this.energy.CurrentValue);
     }
 }
