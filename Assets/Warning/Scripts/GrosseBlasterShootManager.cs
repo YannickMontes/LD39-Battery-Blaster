@@ -34,7 +34,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 			
 
 
-		if (Input.GetButtonUp("Fire3") && !isShooting && isLoading) {
+
+		if (Input.GetButtonUp("Fire3") && isLoading || isLoading && Terminator.GetTerminator ().energy.CurrentValue <= 0) {
 			flashCharge.Stop ();
 			isShooting = true ;
 			isLoading = false;
@@ -42,15 +43,14 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 			pressTime = upTime - downTime;
 			Invoke("Stop", pressTime);
 			StartCoroutine(StartShooting());
-		}
-			
+		}			
 		
 	}
 
 	IEnumerator StartLoading() {
 		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			flashCharge.Play ();
-			Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);
+			Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);			
 			yield return new WaitForSeconds(1.0f);
 		}
 	}
