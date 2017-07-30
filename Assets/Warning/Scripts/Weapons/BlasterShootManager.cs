@@ -82,7 +82,7 @@ public class BlasterShootManager : MonoBehaviour {
 		Terminator.GetTerminator ().DecreaseEnergy (energyCostPerSec);
 
 		RaycastHit hitPoint;
-		if (Physics.Raycast (fpsCamera.transform.position, fpsCamera.transform.forward, out hitPoint, range)) {
+		if (Physics.Raycast (fpsCamera.transform.position, fpsCamera.transform.forward, out hitPoint, range, ~(1<<8))) {
 			Target target = hitPoint.transform.GetComponent<Target> ();
 			if (target != null) {
 				target.TakeDamage (damage);
