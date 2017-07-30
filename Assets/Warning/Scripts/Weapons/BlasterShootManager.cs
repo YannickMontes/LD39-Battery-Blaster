@@ -52,6 +52,7 @@ public class BlasterShootManager : MonoBehaviour {
 		isCoroutineActive = true;
 		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			Invoke("Stop", delay);
+			SoundManager.instance.playSingle (SoundManager.instance.efxBlasterSource.clip);
 			Shoot ();
             yield return new WaitForSeconds(delay);
 		}

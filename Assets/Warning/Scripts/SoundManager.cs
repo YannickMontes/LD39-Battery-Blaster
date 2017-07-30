@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-	public AudioSource efxSource;
+	public AudioSource efxBlasterSource;
+	public AudioSource efxRokketSource;
+	public AudioSource efxGBlasterLoadSource;
+	public AudioSource efxGBlasterShootSource;
 	public AudioSource musicSource;
 	public static SoundManager instance = null;
 
@@ -22,8 +25,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void playSingle(AudioClip clip){
-		efxSource.clip = clip;
-		efxSource.Play ();
+		efxBlasterSource.clip = clip;
+		efxBlasterSource.Play ();
 	}
 
 	public void RandomizeSfx(params AudioClip [] clips){
@@ -31,9 +34,9 @@ public class SoundManager : MonoBehaviour {
 		int randomIndex = 0;//Random.Range (0, clips.Length);
 		float randomPitch = Random.Range (lowPitchRange, highPitchRange);
 
-		efxSource.pitch = randomPitch;
-		efxSource.clip = clips [randomIndex];
-		efxSource.Play ();
+		efxBlasterSource.pitch = randomPitch;
+		efxBlasterSource.clip = clips [randomIndex];
+		efxBlasterSource.Play ();
 
 	}
 
