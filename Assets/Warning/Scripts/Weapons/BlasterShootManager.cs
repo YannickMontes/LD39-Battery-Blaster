@@ -53,7 +53,7 @@ public class BlasterShootManager : MonoBehaviour {
 		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			Invoke("Stop", delay);
 			Shoot ();
-			yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay);
 		}
 		isCoroutineActive = false;
 	}

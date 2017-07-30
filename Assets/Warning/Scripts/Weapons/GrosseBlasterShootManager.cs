@@ -8,6 +8,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	public float CostPerSec = 10.0f;
 	public GameObject flashCharge;
 	public GameObject flashShoot;
+    public GameObject hitParticleEffectPrefab;
 	public float range = 30.0f;
 	public float radius = 0.5f;
 	public Camera fpsCamera;
@@ -21,6 +22,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
     private Light chargeLight;
     private ParticleSystem chargeParticlesSystem;
+    private GameObject hitParticleEffectGo;
 
     // Use this for initialization
     void Start () {
@@ -28,6 +30,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
         flashCharge.SetActive(false);
         chargeLight = flashCharge.GetComponentInChildren<Light>();
         chargeParticlesSystem = flashCharge.GetComponentInChildren<ParticleSystem>();
+        hitParticleEffectGo = GameObject.Instantiate(hitParticleEffectPrefab);
+        hitParticleEffectGo.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,6 +51,20 @@ public class GrosseBlasterShootManager : MonoBehaviour {
             chargeParticlesSystem.startSize = Mathf.Clamp(amountPower * 0.5f, 0, 2f);
         }
 
+        if (isShooting) {
+            RaycastHit[] hits = Physics.RaycastAll(fpsCamera.transform.position, fpsCamera.transform.forward, range);
+            if (hits.Length >= 1 && hits[0].collider != null) {
+                hitParticleEffectGo.transform.position = hits[0].point;
+                hitParticleEffectGo.SetActive(true);
+                hitParticleEffectGo.GetComponent<ParticleSystem>().loop = true;
+                foreach (Light light in hitParticleEffectGo.GetComponentsInChildren<Light>()) {
+                    light.enabled = true;
+                }
+            }
+            else {
+                hitParticleEffectGo.SetActive(false);
+            }
+        }
 
 
         if (Input.GetButtonUp("Fire3") && isLoading || isLoading && Terminator.GetTerminator ().energy.CurrentValue <= 0) {
@@ -98,7 +116,6 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 			hits.AddRange (tmpHits);
 		}
 
-
 			
 
 		foreach (RaycastHit hit in hits) {
@@ -115,7 +132,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 		}
 
 		if (targets != null) {
-			foreach (Target target in targets) {
+
+            foreach (Target target in targets) {
 				if (target != null) {
 					Debug.Log ("hit.");
 					target.TakeDamage (damagePerTic);
@@ -130,5 +148,17 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	void Stop() {
         flashShoot.SetActive(false);
         isShooting = false;
-	}
+        StartCoroutine(DisableHitEffect());
+        foreach(Light light in hitParticleEffectGo.GetComponentsInChildren<Light>()) {
+            light.enabled = false;
+        }
+    }
+
+    private IEnumerator DisableHitEffect() {
+        hitParticleEffectGo.GetComponent<ParticleSystem>().loop = false;
+        yield return new WaitForSeconds(0.5f);
+        if (isShooting == false) {
+            hitParticleEffectGo.SetActive(false);
+        }
+    }
 }
