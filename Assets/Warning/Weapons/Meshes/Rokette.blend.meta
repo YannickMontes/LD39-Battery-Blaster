@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 71848d4d7796abc498a1750f4a5d168d
-timeCreated: 1501349021
+guid: eb4bb653296822347a78e957c867ab41
+timeCreated: 1501349024
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -8,40 +8,30 @@ ModelImporter:
     100000: Cylinder
     100002: Cylinder_001
     100004: Cylinder_002
-    100006: Cylinder_003
-    100008: Cylinder_004
-    100010: Cylinder_005
-    100012: Cylinder_006
-    100014: //RootNode
+    100006: Cylinder_004
+    100008: //RootNode
+    100010: Plane
     400000: Cylinder
     400002: Cylinder_001
     400004: Cylinder_002
-    400006: Cylinder_003
-    400008: Cylinder_004
-    400010: Cylinder_005
-    400012: Cylinder_006
-    400014: //RootNode
+    400006: Cylinder_004
+    400008: //RootNode
+    400010: Plane
     2300000: Cylinder
     2300002: Cylinder_001
     2300004: Cylinder_002
-    2300006: Cylinder_003
-    2300008: Cylinder_004
-    2300010: Cylinder_005
-    2300012: Cylinder_006
+    2300006: Cylinder_004
+    2300008: Plane
     3300000: Cylinder
     3300002: Cylinder_001
     3300004: Cylinder_002
-    3300006: Cylinder_003
-    3300008: Cylinder_004
-    3300010: Cylinder_005
-    3300012: Cylinder_006
-    4300000: Cylinder_001
-    4300002: Cylinder
-    4300004: Cylinder_002
-    4300006: Cylinder_003
+    3300006: Cylinder_004
+    3300008: Plane
+    4300000: Plane
+    4300002: Cylinder_002
+    4300004: Cylinder_001
+    4300006: Cylinder
     4300008: Cylinder_004
-    4300010: Cylinder_005
-    4300012: Cylinder_006
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -71,7 +61,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
