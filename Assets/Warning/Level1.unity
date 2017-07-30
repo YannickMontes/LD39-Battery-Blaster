@@ -483,7 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 0
+  maxGeneration: 2
   currentGeneration: 0
 --- !u!1 &340457374
 GameObject:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 0
+  maxGeneration: 1
   currentGeneration: 0
 --- !u!1 &370058356
 GameObject:
@@ -957,7 +957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 0
+  maxGeneration: 5
   currentGeneration: 0
 --- !u!1 &1159900286
 GameObject:
@@ -1465,7 +1465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
   canGenerate: 0
-  maxGeneration: 1
+  maxGeneration: 10
   currentGeneration: 0
 --- !u!1 &1977478740
 GameObject:

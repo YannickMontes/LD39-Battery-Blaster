@@ -8,11 +8,12 @@ public class EnnemySpawner : MonoBehaviour {
     public bool canGenerate;
     public int maxGeneration;
     public int currentGeneration;
+    public float spawnDelay = 2.0f;
 
 	// Use this for initialization
 	void Start ()
     {
-        InvokeRepeating("Spawn", 0.0f, 5.0f);
+        InvokeRepeating("Spawn", 0.0f, spawnDelay);
 	}
 	
 	// Update is called once per frame
@@ -33,7 +34,8 @@ public class EnnemySpawner : MonoBehaviour {
             {
                 GameObject en = Instantiate(ennemy);
                 en.GetComponent<EnnemyMovement>().onlyChase = true;
-                en.transform.position = new Vector3(this.transform.position.x, 2.0f, this.transform.position.z);
+                en.transform.position = new Vector3(this.transform.position.x, Random.Range(1, 7), this.transform.position.z);
+                ;
                 en.transform.LookAt(Terminator.GetTerminator().transform);
             }
             currentGeneration++;
