@@ -76,22 +76,15 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 		for (int i = 0; i < iterations/4; i++) {
 			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, +sideSize), Random.Range(0,+upperSize),0), fpsCamera.transform.forward, range);
 			hits.AddRange (tmpHits);
-		}
-
-		for (int i = 0; i < iterations/4; i++) {
 			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, -sideSize), Random.Range(0,+upperSize),0), fpsCamera.transform.forward, range);
 			hits.AddRange (tmpHits);
-		}
-
-		for (int i = 0; i < iterations/4; i++) {
 			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, +sideSize), Random.Range(0,-upperSize),0), fpsCamera.transform.forward, range);
 			hits.AddRange (tmpHits);
-		}
-
-		for (int i = 0; i < iterations/4; i++) {
 			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, -sideSize), Random.Range(0,-upperSize),0), fpsCamera.transform.forward, range);
 			hits.AddRange (tmpHits);
 		}
+
+
 			
 
 		foreach (RaycastHit hit in hits) {
