@@ -88,10 +88,10 @@ public class BlasterShootManager : MonoBehaviour {
 				target.TakeDamage (damage);
 			}
 
-			GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
             foreach (Transform t in listParticlesPosition) {
-                t.LookAt(impactGO.transform);
+                t.LookAt(hitPoint.point);
             }
+            GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
             Destroy (impactGO, 0.5f);
 		}
 

@@ -7,6 +7,7 @@ public class Target : MonoBehaviour {
 	public float health = 50f;
     private DoorKeeper doorKeeper;
 	public bool isBoss = false;
+    public GameObject boomParticlesEffectPrefab;
 
 	public void TakeDamage(float amount){
 		if (isBoss) {
@@ -29,7 +30,10 @@ public class Target : MonoBehaviour {
 	void Die(){
         if(doorKeeper!= null)
             doorKeeper.RemoveFromEnnemiesInRoom(this.gameObject);
-		Destroy (gameObject);
+        GameObject boom = GameObject.Instantiate(boomParticlesEffectPrefab);
+        boom.transform.position = transform.position;
+        Destroy(boom, 3f);
+        Destroy (gameObject);
 	}
 
     public void SetDoorKeeper(DoorKeeper door)
