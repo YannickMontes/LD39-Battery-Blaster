@@ -619,6 +619,41 @@ Prefab:
       propertyPath: range
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 198330413590811904, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198330413590811904, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1893447117
+      objectReference: {fileID: 0}
+    - target: {fileID: 198569496048315234, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198569496048315234, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: randomSeed
+      value: 257825155
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085911023491248, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: damagePerTic
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085911023491248, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: upperSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085911023491248, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: sideSize.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
   m_IsPrefabParent: 0
