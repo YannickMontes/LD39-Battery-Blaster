@@ -6,9 +6,9 @@ public class BigBossManager : MonoBehaviour {
 
 
 	public float lifePoints = 200f;
-	public GameObject SG1;
-	public GameObject SG2;
-	public GameObject SG3;
+	public Target SG1;
+	public Target SG2;
+	public Target SG3;
 
 
 	bool shield1 = true;
@@ -33,18 +33,15 @@ public class BigBossManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Target tmpTarget = SG1.GetComponentInChildren<Target> ();
-		if (tmpTarget == null) {
+		if (SG1.health <= 0) {
 				shield1 = false;
 		}
 
-		tmpTarget = SG2.GetComponentInChildren<Target> ();
-		if (tmpTarget == null) {
+		if (SG2.health <= 0) {
 				shield2 = false;
 		}
 
-		tmpTarget = SG3.GetComponentInChildren<Target> ();
-		if (tmpTarget == null) {
+		if (SG3.health <= 0) {
 				shield3 = false;
 		}
 
