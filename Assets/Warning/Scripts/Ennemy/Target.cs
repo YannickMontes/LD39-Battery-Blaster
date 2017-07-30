@@ -6,12 +6,24 @@ public class Target : MonoBehaviour {
 
 	public float health = 50f;
     private DoorKeeper doorKeeper;
+	public bool isBoss = false;
 
 	public void TakeDamage(float amount){
-		health -= amount;
-		if (health <= 0f) {
-			Die ();
+		if (isBoss) {
+			if (!BigBossManager.getBBM().invulnerable ) {
+				health -= amount;
+				if (health <= 0f) {
+					Die ();
+				}
+			}
+		} else {
+			health -= amount;
+			if (health <= 0f) {
+				Die ();
+			}
 		}
+
+
 	}
 
 	void Die(){
