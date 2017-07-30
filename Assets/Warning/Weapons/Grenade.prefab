@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grenadeExplosiveDelay: 2
   radius: 30
-  damage: 50
+  damage: 20
   impactEffect: {fileID: 1680058025826580, guid: 2ec61f632227dab4e8b318b335b4d88a,
     type: 2}
   grenadeExplosivePower: 1000
