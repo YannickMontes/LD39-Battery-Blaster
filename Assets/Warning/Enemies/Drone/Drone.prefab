@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 54314320228099842}
   - component: {fileID: 65974659566869128}
   - component: {fileID: 114197250129128138}
+  - component: {fileID: 114674087863238020}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -402,7 +403,7 @@ Transform:
   - {fileID: 4083457844127496}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 122.009, z: 0}
 --- !u!4 &4548781488408546
 Transform:
   m_ObjectHideFlags: 1
@@ -1124,5 +1125,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  distanceToPlayer: 20
+  distanceToPlayer: 10
   onlyChase: 0
+--- !u!114 &114674087863238020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393453945437928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44f85462cac1b47a71af30ffe9536e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 11
+  delay: 2
+  damage: 1

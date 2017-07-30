@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 82301748540614284}
   - component: {fileID: 114711218809862774}
   - component: {fileID: 114785959264673526}
+  - component: {fileID: 65761955074488174}
   m_Layer: 0
   m_Name: FPSController
   m_TagString: Player
@@ -1587,14 +1588,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553007486338394}
-  m_LocalRotation: {x: -0, y: -0.713961, z: -0, w: 0.70018554}
-  m_LocalPosition: {x: 1.1033982, y: 0, z: 0.9077405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4423969204125982}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -91.116005, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4458999040718244
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504542732382610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.19, y: 0.21, z: -0.424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4827921854872446}
+  m_Father: {fileID: 4694400940104460}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4491758410532780
 Transform:
   m_ObjectHideFlags: 1
@@ -3884,6 +3899,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &65761955074488174
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1553007486338394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!81 &81110960839320886
 AudioListener:
   m_ObjectHideFlags: 1
@@ -4200,7 +4227,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508750976609690}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -4326,6 +4353,7 @@ MonoBehaviour:
     currentValue: 100
     maxValue: 100
   radarRadius: 0
+  controller: {fileID: 0}
   isAlive: 0
 --- !u!114 &114725354431329402
 MonoBehaviour:
@@ -4369,8 +4397,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyCostPerSec: 1
-  damage: 2
+  energyCostPerSec: 0.5
+  damage: 10
   range: 100
   particlesFireSpark: {fileID: 1772819581313612, guid: 3e07cde39c2da664e9f8e71923bdfa21,
     type: 2}

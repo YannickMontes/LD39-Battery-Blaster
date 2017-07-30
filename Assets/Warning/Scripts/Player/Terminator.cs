@@ -25,6 +25,9 @@ public class Terminator : MonoBehaviour
 	public static Terminator GetTerminator(){
 		return TerminatorCurrent;
 	}
+	public void DecreaseHP(float amount){
+		this.hp.CurrentValue -= amount;
+	}
 
 	public void DecreaseEnergy(float energyCost)
     {
