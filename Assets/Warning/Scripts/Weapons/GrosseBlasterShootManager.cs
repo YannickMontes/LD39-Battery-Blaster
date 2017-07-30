@@ -7,7 +7,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	float downTime, upTime, pressTime = 0;
 	public float CostPerSec = 10.0f;
 	public ParticleSystem flashCharge;
-	public ParticleSystem flashShoot;
+	public GameObject flashShoot;
 	public float range = 30.0f;
 	public float radius = 0.5f;
 	public Camera fpsCamera;
@@ -20,8 +20,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	public float sideSize = 1.0f;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        flashShoot.SetActive(false);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -57,7 +57,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
 	IEnumerator StartShooting() {
 		while (isShooting ) {
-			flashShoot.Play ();
+			flashShoot.SetActive(true);
 			Shoot ();
 			yield return new WaitForSeconds(ticsDelay);
 		}
@@ -113,8 +113,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	}
 		
 
-	void Stop(){
-		flashShoot.Stop ();
-		isShooting = false;
+	void Stop() {
+        flashShoot.SetActive(false);
+        isShooting = false;
 	}
 }

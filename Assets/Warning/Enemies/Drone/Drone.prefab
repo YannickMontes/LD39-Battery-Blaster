@@ -396,7 +396,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1393453945437928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: -9.59, y: 3.66, z: 4.641446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4083457844127496}
@@ -1078,8 +1078,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 2, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.1362782, y: 0.7258847, z: 2.0462997}
+  m_Center: {x: 0.294528, y: -0.17552936, z: 0.024797082}
 --- !u!95 &95115479340794226
 Animator:
   serializedVersion: 3
@@ -1109,6 +1109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  isBoss: 0
+  boomParticlesEffectPrefab: {fileID: 1680058025826580, guid: 2bb96be27f1d5d94c8b8310d673b4670,
+    type: 2}
 --- !u!114 &114505593193687092
 MonoBehaviour:
   m_ObjectHideFlags: 1
