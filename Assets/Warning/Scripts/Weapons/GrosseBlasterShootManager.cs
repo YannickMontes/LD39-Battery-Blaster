@@ -6,7 +6,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
 	float downTime, upTime, pressTime = 0;
 	public float CostPerSec = 10.0f;
-	public ParticleSystem flashCharge;
+	public GameObject flashCharge;
 	public GameObject flashShoot;
 	public float range = 30.0f;
 	public float radius = 0.5f;
@@ -18,25 +18,39 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	int iterations = 30;
 	public float upperSize = 1.0f;
 	public float sideSize = 1.0f;
-	// Use this for initialization
-	void Start () {
+
+    private Light chargeLight;
+    private ParticleSystem chargeParticlesSystem;
+
+    // Use this for initialization
+    void Start () {
         flashShoot.SetActive(false);
+        flashCharge.SetActive(false);
+        chargeLight = flashCharge.GetComponentInChildren<Light>();
+        chargeParticlesSystem = flashCharge.GetComponentInChildren<ParticleSystem>();
     }
-	
-	// Update is called once per frame
-	void Update () {
 
-		if (Input.GetButtonDown("Fire3")  && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
-			isLoading = true;
-			downTime = Time.time;
-			StartCoroutine(StartLoading());
-		}
-			
+    // Update is called once per frame
+    void Update() {
+
+        if (Input.GetButtonDown("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
+            isLoading = true;
+            downTime = Time.time;
+            StartCoroutine(StartLoading());
+
+        }
+
+
+        if (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
+            float amountPower = Time.time - downTime;
+            chargeLight.intensity = Mathf.Clamp(amountPower * 0.5f, 0, 2f);
+            chargeParticlesSystem.startSize = Mathf.Clamp(amountPower * 0.5f, 0, 2f);
+        }
 
 
 
-		if (Input.GetButtonUp("Fire3") && isLoading || isLoading && Terminator.GetTerminator ().energy.CurrentValue <= 0) {
-			flashCharge.Stop ();
+        if (Input.GetButtonUp("Fire3") && isLoading || isLoading && Terminator.GetTerminator ().energy.CurrentValue <= 0) {
+            flashCharge.SetActive(false);
 			isShooting = true ;
 			isLoading = false;
 			upTime = Time.time;
@@ -49,8 +63,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
 	IEnumerator StartLoading() {
 		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0) {
-			flashCharge.Play ();
-			Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);			
+            flashCharge.SetActive(true);
+            Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);			
 			yield return new WaitForSeconds(1.0f);
 		}
 	}
