@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 20555525725935846}
   - component: {fileID: 81110960839320886}
   - component: {fileID: 124798439432219974}
+  - component: {fileID: 114451588651176306}
   m_Layer: 0
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
@@ -1509,14 +1510,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553007486338394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.713961, z: -0, w: 0.70018554}
+  m_LocalPosition: {x: 1.1033982, y: 0, z: 0.9077405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4423969204125982}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -91.116005, z: 0}
 --- !u!4 &4458999040718244
 Transform:
   m_ObjectHideFlags: 1
@@ -3860,7 +3861,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -3996,6 +3997,18 @@ MonoBehaviour:
   ticsDelay: 0.5
   upperSize: 1
   sideSize: 1
+--- !u!114 &114451588651176306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1508750976609690}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: e568bd73b1def404e83fdbdb3271ca3a, type: 2}
 --- !u!114 &114532892152660650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4147,7 +4160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gIsDown: 0
   rollingFaceLimit: 1
-  energyGain: 1
+  energyGain: 5
 --- !u!114 &114845226302828788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4162,7 +4175,9 @@ MonoBehaviour:
   energyCostPerSec: 1
   damage: 2
   range: 100
-  flash: {fileID: 0}
+  particlesFireSpark: {fileID: 1772819581313612, guid: 3e07cde39c2da664e9f8e71923bdfa21,
+    type: 2}
+  flashGo: {fileID: 1132879804101594, guid: 107085e632cf2b140adc82ba88ad13c7, type: 2}
   flash_position_UR: {fileID: 4774381364600712}
   flash_position_LL: {fileID: 4527491406627580}
   flash_position_LR: {fileID: 4303086339410436}

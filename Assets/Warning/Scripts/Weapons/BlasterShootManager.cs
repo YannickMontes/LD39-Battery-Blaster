@@ -7,7 +7,9 @@ public class BlasterShootManager : MonoBehaviour {
 	public float damage = 10f;
 	public float range = 100f;
 
-	public ParticleSystem flash;
+    public GameObject particlesFireSpark;
+    public GameObject flashGo;
+    private ParticleSystem flash;
 	public Transform flash_position_UR;
 	public Transform flash_position_LL;
 	public Transform flash_position_LR;
@@ -22,6 +24,8 @@ public class BlasterShootManager : MonoBehaviour {
 
 	bool isCoroutineActive = false;
 
+    private Light laserLight;
+
 
 	void Start(){
 		listParticlesPosition = new List<Transform> ();
@@ -29,8 +33,10 @@ public class BlasterShootManager : MonoBehaviour {
 		listParticlesPosition.Add (flash_position_UR);
 		listParticlesPosition.Add (flash_position_LL);
 		listParticlesPosition.Add (flash_position_LR);
-	
-	}
+        flash = GameObject.Instantiate(flashGo).GetComponent<ParticleSystem>();
+        laserLight = flash.gameObject.GetComponent<Light>();
+
+    }
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Fire1")  && !isCoroutineActive){
@@ -54,14 +60,21 @@ public class BlasterShootManager : MonoBehaviour {
 
 	void Stop(){
 		flash.Stop ();
-	}
+        flash.Clear();
+        laserLight.enabled = false;
+    }
 
 	void Shoot(){
 		flash.transform.position = listParticlesPosition[ParticleSystemIndex].position;
 		flash.transform.forward = listParticlesPosition [ParticleSystemIndex].forward;
 		flash.Play ();
+        laserLight.enabled = true;
+        GameObject sparks = ParticlePooler.current.GetPooledObject();
+        sparks.transform.position = listParticlesPosition[ParticleSystemIndex].position;
+        sparks.transform.SetParent(listParticlesPosition[ParticleSystemIndex]);
+        StartCoroutine(Tools.DisableCortoutine(sparks, 1f));
 
-		if (ParticleSystemIndex < listParticlesPosition.Count-1)
+        if (ParticleSystemIndex < listParticlesPosition.Count-1)
 			ParticleSystemIndex++;
 		else
 			ParticleSystemIndex = 0;
@@ -76,7 +89,10 @@ public class BlasterShootManager : MonoBehaviour {
 			}
 
 			GameObject impactGO = Instantiate (impactEffect, hitPoint.point, Quaternion.LookRotation (hitPoint.normal));
-			Destroy (impactGO, 2);
+            foreach (Transform t in listParticlesPosition) {
+                t.LookAt(impactGO.transform);
+            }
+            Destroy (impactGO, 0.5f);
 		}
 
 	}
