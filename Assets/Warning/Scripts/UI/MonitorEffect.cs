@@ -38,12 +38,14 @@ public class MonitorEffect : MonoBehaviour {
                 boxes.Add(new BoxEffect(new Rect(0, boxHeight + Screen.height, Screen.width, boxHeight), GetRandomSpeed()));
             }
         }
+        foreach (BoxEffect box in boxes) {
+            box.rect = new Rect(box.rect.x, box.rect.y + box.speed * Time.deltaTime, box.rect.width, box.rect.height);
+        }
     }
 
     private void OnGUI() {
         foreach(BoxEffect box in boxes) {
             GUI.DrawTexture(box.rect, texture);
-            box.rect = new Rect(box.rect.x, box.rect.y + box.speed * Time.deltaTime, box.rect.width, box.rect.height);
             if (goUp == false) {
                 if (box.rect.y > (Screen.height + box.rect.height) * 1.05f) {
                     StartCoroutine(RemoveBox(box));
