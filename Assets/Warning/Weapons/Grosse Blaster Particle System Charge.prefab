@@ -42,7 +42,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1947091156457866
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +110,7 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.6403547, g: 0.7252028, b: 0.9264706, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8034719
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -349,7 +349,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
+      scalar: 0.8034719
       minScalar: 0.5
       maxCurve:
         serializedVersion: 2
