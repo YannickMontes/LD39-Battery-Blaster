@@ -11,7 +11,12 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	public float range = 30.0f;
 	public float radius = 0.5f;
 	public Camera fpsCamera;
-	bool stopShooting = true;
+	bool isShooting = false;
+	public float damagePerTic = 5f;
+	public float ticsDelay = 0.5f;
+
+	public Vector3 upperSize = new Vector3(0,1,0);
+	public Vector3 sideSize = new Vector3(1,0,0);
 	// Use this for initialization
 	void Start () {
 		
@@ -20,25 +25,22 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButtonDown("Fire3")  && Terminator.GetTerminator().energy.CurrentValue > 0 && stopShooting) {
+		if (Input.GetButtonDown("Fire3")  && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
 			downTime = Time.time;
-			stopShooting = true;
 			StartCoroutine(StartCharging());
 		}
 			
 
 
-		if (Input.GetButtonUp("Fire3")) {
+		if (Input.GetButtonUp("Fire3") && !isShooting) {
 			flashCharge.Stop ();
-			stopShooting = false;
+			isShooting = true ;
 			upTime = Time.time;
 			pressTime = upTime - downTime;
-		}
-
-		if (!stopShooting) {
+			Invoke("Stop", pressTime);
 			StartCoroutine(StartShooting());
-			Stop ();
 		}
+			
 		
 	}
 
@@ -51,20 +53,51 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	}
 
 	IEnumerator StartShooting() {
-		while (Input.GetButton("Fire3") && !stopShooting) {
+		while (isShooting ) {
 			flashShoot.Play ();
 			Shoot ();
-			yield return new WaitForSeconds(0.5f);
+			yield return new WaitForSeconds(ticsDelay);
 		}
 	}
 
 	void Shoot(){
+		List<Target> targets = new List<Target> ();
 
-		RaycastHit[] hits;
-		hits = Physics.RaycastAll (fpsCamera.transform.position, fpsCamera.transform.forward, range);
-		for (int i = 0; i < hits.Length; i++) {
-			RaycastHit hit = hits [i];
-			Debug.Log ("looooooo "+ hit.transform.name);
+		List<RaycastHit> hits = new List<RaycastHit>();
+		RaycastHit[] tmpHits;
+		tmpHits = Physics.RaycastAll (fpsCamera.transform.position, fpsCamera.transform.forward, range);
+		hits.AddRange (tmpHits);
+		tmpHits = Physics.RaycastAll (fpsCamera.transform.position+upperSize+sideSize, fpsCamera.transform.forward, range);
+		hits.AddRange (tmpHits);
+		tmpHits = Physics.RaycastAll (fpsCamera.transform.position-upperSize+sideSize, fpsCamera.transform.forward, range);
+		hits.AddRange (tmpHits);
+		tmpHits = Physics.RaycastAll (fpsCamera.transform.position+upperSize-sideSize, fpsCamera.transform.forward, range);
+		hits.AddRange (tmpHits);
+		tmpHits = Physics.RaycastAll (fpsCamera.transform.position-upperSize-sideSize, fpsCamera.transform.forward, range);
+		hits.AddRange (tmpHits);
+
+
+		foreach (RaycastHit hit in hits) {
+			Target target = hit.transform.GetComponent<Target> ();
+			if (targets != null) {
+				if (target != null) {
+					if (!targets.Contains (target)) {
+						Debug.Log ("tape.");
+						targets.Add (target);
+					}
+				}
+			}
+			
+		}
+
+		if (targets != null) {
+			foreach (Target target in targets) {
+				if (target != null) {
+					Debug.Log ("hit.");
+					target.TakeDamage (damagePerTic);
+				}
+			}
+			targets.Clear ();
 		}
 		
 	}
@@ -72,6 +105,6 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
 	void Stop(){
 		flashShoot.Stop ();
-		stopShooting = true;
+		isShooting = false;
 	}
 }
