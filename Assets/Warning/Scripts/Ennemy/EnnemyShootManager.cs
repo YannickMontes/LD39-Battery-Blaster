@@ -8,9 +8,18 @@ public class EnnemyShootManager : MonoBehaviour {
 	public float range = 10.0f;
 	public float delay = 2.0f;
 	public float damage = 1.0f;
+
+	public GameObject flashGo ;
+	private ParticleSystem flash_L;
+	private ParticleSystem flash_R;
+	public Transform flash_position_L;
+	public Transform flash_position_R;
+
+
 	// Use this for initialization
 	void Start () {
-		
+		flash_L = GameObject.Instantiate(flashGo).GetComponent<ParticleSystem>();
+		flash_R = GameObject.Instantiate(flashGo).GetComponent<ParticleSystem>();
 	}
 	
 	// Update is called once per frame
@@ -30,7 +39,14 @@ public class EnnemyShootManager : MonoBehaviour {
 	}
 
 	public void Shoot(){
-		Debug.Log ("pan");
+		flash_L.transform.position = flash_position_L.position;
+		flash_L.transform.forward = flash_position_L.forward;
+		flash_L.Play ();
+
+		flash_R.transform.position = flash_position_R.position;
+		flash_R.transform.forward = flash_position_R.forward;
+		flash_R.Play ();
+
 		Terminator.GetTerminator ().DecreaseHP (damage);
 	}
 }
