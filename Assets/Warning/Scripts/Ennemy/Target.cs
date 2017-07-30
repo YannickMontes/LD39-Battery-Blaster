@@ -30,9 +30,12 @@ public class Target : MonoBehaviour {
 	void Die(){
         if(doorKeeper!= null)
             doorKeeper.RemoveFromEnnemiesInRoom(this.gameObject);
-        GameObject boom = GameObject.Instantiate(boomParticlesEffectPrefab);
-        boom.transform.position = transform.position;
-        Destroy(boom, 3f);
+        if (boomParticlesEffectPrefab != null)
+        {
+            GameObject boom = GameObject.Instantiate(boomParticlesEffectPrefab);
+            boom.transform.position = transform.position;
+            Destroy(boom, 3f);
+        }
         Destroy (gameObject);
 	}
 
