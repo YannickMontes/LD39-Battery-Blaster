@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4111724437156258}
   - component: {fileID: 108258793398526826}
   m_Layer: 0
-  m_Name: Point light
+  m_Name: BlasterLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

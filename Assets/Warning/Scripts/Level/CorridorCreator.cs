@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CouloirCreator : MonoBehaviour {
+public class CorridorCreator : MonoBehaviour {
 
     public float width = 10.0f;
     public float length = 50.0f;
