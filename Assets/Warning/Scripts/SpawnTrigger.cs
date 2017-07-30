@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnTrigger : MonoBehaviour {
 
     public EnnemySpawner[] ennemySpawner;
+    public DoorKeeper doors;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +25,7 @@ public class SpawnTrigger : MonoBehaviour {
             {
                 ennemySpawner[i].TurnGenerateOn();
             }
+            doors.gameObject.SetActive(true);
         }
     }
 }
