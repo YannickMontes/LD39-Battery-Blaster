@@ -5,11 +5,13 @@ using UnityEngine;
 public class Terminator : MonoBehaviour
 {
     public Stat hp;
+	public float runningDrainPerSec = 10.0f;
     public Stat energy;
     public float radarRadius;
 	static Terminator TerminatorCurrent;
-
+	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
     public bool isAlive;
+	bool isCoroutineActive = false;
 
 	void Start ()
     {
@@ -19,8 +21,26 @@ public class Terminator : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-      
+		if (!controller.m_IsWalking && !isCoroutineActive && energy.CurrentValue>0) {
+			StartCoroutine(StartEnergyDrain());
+		}
+
+		if (energy.CurrentValue <= 0) {
+			controller.canRun = false;
+		} else
+			controller.canRun = true;
 	}
+
+	IEnumerator StartEnergyDrain() {
+		isCoroutineActive = true;
+		while (!controller.m_IsWalking && energy.CurrentValue > 0) {
+			DecreaseEnergy (runningDrainPerSec);
+			yield return new WaitForSeconds(1.0f);
+		}
+		isCoroutineActive = false;
+	}
+
+
 
 	public static Terminator GetTerminator(){
 		return TerminatorCurrent;
