@@ -12,11 +12,12 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	public float radius = 0.5f;
 	public Camera fpsCamera;
 	bool isShooting = false;
+	bool isLoading = false;
 	public float damagePerTic = 5f;
 	public float ticsDelay = 0.5f;
-
-	public Vector3 upperSize = new Vector3(0,1,0);
-	public Vector3 sideSize = new Vector3(1,0,0);
+	int iterations = 30;
+	public float upperSize = 1.0f;
+	public float sideSize = 1.0f;
 	// Use this for initialization
 	void Start () {
 		
@@ -26,15 +27,17 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	void Update () {
 
 		if (Input.GetButtonDown("Fire3")  && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
+			isLoading = true;
 			downTime = Time.time;
-			StartCoroutine(StartCharging());
+			StartCoroutine(StartLoading());
 		}
 			
 
 
-		if (Input.GetButtonUp("Fire3") && !isShooting) {
+		if (Input.GetButtonUp("Fire3") && !isShooting && isLoading) {
 			flashCharge.Stop ();
 			isShooting = true ;
+			isLoading = false;
 			upTime = Time.time;
 			pressTime = upTime - downTime;
 			Invoke("Stop", pressTime);
@@ -44,7 +47,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 		
 	}
 
-	IEnumerator StartCharging() {
+	IEnumerator StartLoading() {
 		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0) {
 			flashCharge.Play ();
 			Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);
@@ -65,17 +68,31 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
 		List<RaycastHit> hits = new List<RaycastHit>();
 		RaycastHit[] tmpHits;
+
 		tmpHits = Physics.RaycastAll (fpsCamera.transform.position, fpsCamera.transform.forward, range);
 		hits.AddRange (tmpHits);
-		tmpHits = Physics.RaycastAll (fpsCamera.transform.position+upperSize+sideSize, fpsCamera.transform.forward, range);
-		hits.AddRange (tmpHits);
-		tmpHits = Physics.RaycastAll (fpsCamera.transform.position-upperSize+sideSize, fpsCamera.transform.forward, range);
-		hits.AddRange (tmpHits);
-		tmpHits = Physics.RaycastAll (fpsCamera.transform.position+upperSize-sideSize, fpsCamera.transform.forward, range);
-		hits.AddRange (tmpHits);
-		tmpHits = Physics.RaycastAll (fpsCamera.transform.position-upperSize-sideSize, fpsCamera.transform.forward, range);
-		hits.AddRange (tmpHits);
 
+
+		for (int i = 0; i < iterations/4; i++) {
+			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, +sideSize), Random.Range(0,+upperSize),0), fpsCamera.transform.forward, range);
+			hits.AddRange (tmpHits);
+		}
+
+		for (int i = 0; i < iterations/4; i++) {
+			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, -sideSize), Random.Range(0,+upperSize),0), fpsCamera.transform.forward, range);
+			hits.AddRange (tmpHits);
+		}
+
+		for (int i = 0; i < iterations/4; i++) {
+			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, +sideSize), Random.Range(0,-upperSize),0), fpsCamera.transform.forward, range);
+			hits.AddRange (tmpHits);
+		}
+
+		for (int i = 0; i < iterations/4; i++) {
+			tmpHits = Physics.RaycastAll (fpsCamera.transform.position+ new Vector3 (Random.Range (0, -sideSize), Random.Range(0,-upperSize),0), fpsCamera.transform.forward, range);
+			hits.AddRange (tmpHits);
+		}
+			
 
 		foreach (RaycastHit hit in hits) {
 			Target target = hit.transform.GetComponent<Target> ();
