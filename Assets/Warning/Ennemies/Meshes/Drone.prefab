@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 114505593193687092}
   - component: {fileID: 54314320228099842}
   - component: {fileID: 65974659566869128}
+  - component: {fileID: 114197250129128138}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -291,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 1809139835573920}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.22713363, y: -0.36934304, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4724489955196962}
   - {fileID: 4671222615592028}
@@ -1096,6 +1097,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114197250129128138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393453945437928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aef487c7a90a3a4eaad8bc75512587f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
 --- !u!114 &114505593193687092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1107,5 +1120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b2ad9d50ede394d92804159f8b13ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 10
+  distanceToPlayer: 20
   onlyChase: 0
