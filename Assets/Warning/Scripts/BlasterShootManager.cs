@@ -7,12 +7,14 @@ public class BlasterShootManager : MonoBehaviour {
 	public float damage = 10f;
 	public float range = 100f;
 
-	public ParticleSystem flash_UL;
-	public ParticleSystem flash_UR;
-	public ParticleSystem flash_LL;
-	public ParticleSystem flash_LR;
+	public ParticleSystem flash;
+	public Transform flash_position_UR;
+	public Transform flash_position_LL;
+	public Transform flash_position_LR;
+	public Transform flash_position_UL;
+
 	public GameObject impactEffect;
-	public List<ParticleSystem> listParticles;
+	public List<Transform> listParticlesPosition;
 
 	public Camera fpsCamera;
 	int ParticleSystemIndex= 0;
@@ -22,33 +24,44 @@ public class BlasterShootManager : MonoBehaviour {
 
 
 	void Start(){
-		listParticles = new List<ParticleSystem> ();
-		listParticles.Add (flash_UL);
-		listParticles.Add (flash_UR);
-		listParticles.Add (flash_LL);
-		listParticles.Add (flash_LR);
+		listParticlesPosition = new List<Transform> ();
+		listParticlesPosition.Add (flash_position_UL);
+		listParticlesPosition.Add (flash_position_UR);
+		listParticlesPosition.Add (flash_position_LL);
+		listParticlesPosition.Add (flash_position_LR);
 	
 	}
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown("Fire1")  && !isCoroutineActive){
 			StartCoroutine(StartShooting());
-		}					
+		}
+
+		if (Terminator.GetTerminator ().energy.CurrentValue <= 0 && flash.isPlaying) {
+			Stop ();
+		}
 	}
 
 	IEnumerator StartShooting() {
 		isCoroutineActive = true;
 		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0) {
+			Invoke("Stop", delay);
 			Shoot ();
 			yield return new WaitForSeconds(delay);
 		}
 		isCoroutineActive = false;
 	}
 
-	void Shoot(){
-		listParticles[ParticleSystemIndex].Play ();
+	void Stop(){
+		flash.Stop ();
+	}
 
-		if (ParticleSystemIndex < listParticles.Count-1)
+	void Shoot(){
+		flash.transform.position = listParticlesPosition[ParticleSystemIndex].position;
+		flash.transform.forward = listParticlesPosition [ParticleSystemIndex].forward;
+		flash.Play ();
+
+		if (ParticleSystemIndex < listParticlesPosition.Count-1)
 			ParticleSystemIndex++;
 		else
 			ParticleSystemIndex = 0;
