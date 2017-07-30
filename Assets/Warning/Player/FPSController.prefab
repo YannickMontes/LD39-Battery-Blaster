@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4926030160556304}
   - component: {fileID: 33253701726692352}
   - component: {fileID: 23239038170738696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4910840449214198}
   - component: {fileID: 33555567426052562}
   - component: {fileID: 23190064600040546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4519592043925198}
   - component: {fileID: 33697004049347776}
   - component: {fileID: 23744789479530682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4758009136463174}
   - component: {fileID: 33166908810797260}
   - component: {fileID: 23853545680402110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4246176646489386}
   - component: {fileID: 33639367771716560}
   - component: {fileID: 23650697255700096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4435725617806966}
   - component: {fileID: 33390218552657338}
   - component: {fileID: 23481133132352888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4149742370750142}
   - component: {fileID: 33315515046355036}
   - component: {fileID: 23849313175995010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4099527130315708}
   - component: {fileID: 95850079275427628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster_UL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4774381364600712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster Particle System Position UR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4992677234988074}
   - component: {fileID: 108775998499774758}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4303086339410436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster Particle System Position LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4415291117125170}
   - component: {fileID: 33858742153836026}
   - component: {fileID: 23192030877172728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 4663253878294814}
   - component: {fileID: 95361705404864532}
   - component: {fileID: 114085911023491248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrosseBlaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4527491406627580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster Particle System Position LL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 4554968135494462}
   - component: {fileID: 33060394990538404}
   - component: {fileID: 23506519262111582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 4545908671622748}
   - component: {fileID: 33962310011256196}
   - component: {fileID: 23656460320655106}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 4652373799180866}
   - component: {fileID: 33536677153606354}
   - component: {fileID: 23070741544373112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4425520700607306}
   - component: {fileID: 95788759133791246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster_LL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 4710998954798184}
   - component: {fileID: 33069278907654708}
   - component: {fileID: 23583203353435022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 4637299463837462}
   - component: {fileID: 33328806024483720}
   - component: {fileID: 23781698313302220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 4002814428275762}
   - component: {fileID: 198512792875575730}
   - component: {fileID: 199168295998356740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +367,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4347673031824672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigLaserObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 4280603109835250}
   - component: {fileID: 33782916499788378}
   - component: {fileID: 23080175726607338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4603498433851208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrosseBlaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 4643730220033036}
   - component: {fileID: 33484747630506618}
   - component: {fileID: 23095048741961162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991191389368428}
   - component: {fileID: 95695547986103868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rokette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 4360282738520194}
   - component: {fileID: 33392326091785756}
   - component: {fileID: 23240345879808644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 33766306700794534}
   - component: {fileID: 198590854485600118}
   - component: {fileID: 199976437308410796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Aura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 4048219945106366}
   - component: {fileID: 33463760259901318}
   - component: {fileID: 23397856998543182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 4054314404362602}
   - component: {fileID: 33676741502392952}
   - component: {fileID: 23531414332431576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 4892610960848222}
   - component: {fileID: 33241771042407624}
   - component: {fileID: 23503283919481574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 4739368478812156}
   - component: {fileID: 33611385235381296}
   - component: {fileID: 23450966174216496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 81110960839320886}
   - component: {fileID: 124798439432219974}
   - component: {fileID: 114451588651176306}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirstPersonCharacter
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 33808397545817914}
   - component: {fileID: 198851233183298244}
   - component: {fileID: 199297594628260800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigLaser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 4924693641856970}
   - component: {fileID: 33734010320466956}
   - component: {fileID: 23166980542062972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 114711218809862774}
   - component: {fileID: 114785959264673526}
   - component: {fileID: 65761955074488174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FPSController
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 4040634454544388}
   - component: {fileID: 33768642708113304}
   - component: {fileID: 23283442268876120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 4977033041941600}
   - component: {fileID: 33391607645877704}
   - component: {fileID: 23200938831943714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   - component: {fileID: 4596704909821112}
   - component: {fileID: 33167213311075084}
   - component: {fileID: 23474135892773408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 4884849477463546}
   - component: {fileID: 33937325799548892}
   - component: {fileID: 23718718336664002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 4363700395241738}
   - component: {fileID: 33112469055880478}
   - component: {fileID: 23886947206928714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -713,7 +713,7 @@ GameObject:
   - component: {fileID: 4951609501334384}
   - component: {fileID: 33980256424822376}
   - component: {fileID: 23832033775804274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 4371027193915572}
   - component: {fileID: 33774926830973352}
   - component: {fileID: 23995657091463134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 4538393579631130}
   - component: {fileID: 33988051793522764}
   - component: {fileID: 23466923545042516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4300289641055766}
   - component: {fileID: 95275648523109450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster_LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 4694400940104460}
   - component: {fileID: 33543455538365880}
   - component: {fileID: 23555038112149174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 4120960072080538}
   - component: {fileID: 198935109060055624}
   - component: {fileID: 199086092015265702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster Particle System LR (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 4269471294501472}
   - component: {fileID: 33689656257416658}
   - component: {fileID: 23741420428275410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 4109335791651584}
   - component: {fileID: 33637040254030902}
   - component: {fileID: 23969722108289872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +846,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4796863184291724}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rokette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 4864923989138694}
   - component: {fileID: 33157989713625306}
   - component: {fileID: 23285855314328468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4533586898305320}
   - component: {fileID: 114845226302828788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 33050689117916612}
   - component: {fileID: 23761341284225532}
   - component: {fileID: 114725354431329402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 4058712248220844}
   - component: {fileID: 33523649661577700}
   - component: {fileID: 23844732599092350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 4154451259263632}
   - component: {fileID: 33090207321063836}
   - component: {fileID: 23839595326353838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4633276869471078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster Particle System Position UL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 4491758410532780}
   - component: {fileID: 33272080714725952}
   - component: {fileID: 23416012740533060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 4087999693208998}
   - component: {fileID: 33333269792186164}
   - component: {fileID: 23035371018710492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 4518404996443102}
   - component: {fileID: 198850499738223562}
   - component: {fileID: 199318798869556504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179947573553274}
   - component: {fileID: 95079746279997930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaster_UR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1029,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4744306147355066}
   - component: {fileID: 108071209266841584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   - component: {fileID: 4986895262313484}
   - component: {fileID: 33971673078873068}
   - component: {fileID: 23369412281495698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 4060222343850334}
   - component: {fileID: 33406382722252642}
   - component: {fileID: 23012481069149380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 4046490062601628}
   - component: {fileID: 33270351216411452}
   - component: {fileID: 23816050050722620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 4291329098416836}
   - component: {fileID: 33216878214041830}
   - component: {fileID: 23764587957728742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1112,7 +1112,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4599126553696230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Grosse Blaster Particle System Charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1129,7 @@ GameObject:
   - component: {fileID: 4927931987100814}
   - component: {fileID: 33350305725205120}
   - component: {fileID: 23427322980051390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 4938112158012136}
   - component: {fileID: 33637855979146882}
   - component: {fileID: 23790639338890458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
