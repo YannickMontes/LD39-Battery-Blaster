@@ -18,7 +18,7 @@ public class FollowAgent : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        float bonus = 0.0f;
+        float bonus = 1.0f;
         float distance = Vector3.Distance(this.transform.position, this.agent.position);
         if (distance > 50.0f)
         {
@@ -29,6 +29,10 @@ public class FollowAgent : MonoBehaviour {
             Vector3 direction = agent.transform.position - this.transform.position;
             direction = direction.normalized;
             body.MovePosition(transform.position + (direction * Time.deltaTime * moveSpeed * bonus));
+        }
+        else
+        {
+            this.body.velocity = Vector3.zero;
         }  
     }
 }
