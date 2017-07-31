@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowBattery: {fileID: 0}
+  lowBatteryText: {fileID: 0}
 --- !u!222 &222949280650141102
 CanvasRenderer:
   m_ObjectHideFlags: 1

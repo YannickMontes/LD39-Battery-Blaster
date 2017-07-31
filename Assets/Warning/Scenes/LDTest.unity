@@ -8383,7 +8383,12 @@ Prefab:
         type: 2}
       propertyPath: lowBattery
       value: 
-      objectReference: {fileID: 2024083811}
+      objectReference: {fileID: 2024083810}
+    - target: {fileID: 114928737431784760, guid: 4b8dc3a229f55284ea75b44ed1da03d6,
+        type: 2}
+      propertyPath: lowBatteryText
+      value: 
+      objectReference: {fileID: 861391804}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b8dc3a229f55284ea75b44ed1da03d6, type: 2}
   m_IsPrefabParent: 0
@@ -15697,6 +15702,11 @@ Prefab:
       propertyPath: key2
       value: 
       objectReference: {fileID: 702428301}
+    - target: {fileID: 114785959264673526, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: reloadingUI
+      value: 
+      objectReference: {fileID: 2024083810}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
   m_IsPrefabParent: 0
@@ -15782,6 +15792,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858652294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &861391804 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1508499409400120, guid: 29fb84fd365fe18429f8a4832d8cd7d4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1050443949}
 --- !u!1 &868440920
 GameObject:
   m_ObjectHideFlags: 0
@@ -37234,9 +37249,9 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2023574106}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!224 &2024083811 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224140343959326424, guid: 29fb84fd365fe18429f8a4832d8cd7d4,
+--- !u!1 &2024083810 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1774681448956386, guid: 29fb84fd365fe18429f8a4832d8cd7d4,
     type: 2}
   m_PrefabInternal: {fileID: 1050443949}
 --- !u!1 &2028303090

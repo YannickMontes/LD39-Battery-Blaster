@@ -11,11 +11,13 @@ public class Terminator : MonoBehaviour
 	static Terminator TerminatorCurrent;
 	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
     public bool isAlive;
+    public bool isRecharging;
 	bool isCoroutineActive = false;
 
 	void Start ()
     {
 		TerminatorCurrent = this;
+        this.isRecharging = false;
         this.energy.Bar = GameObject.Find("EnergyBar").GetComponent<UIBarScript>();
 	}
 

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222333031354405150}
   - component: {fileID: 114922731525570092}
   m_Layer: 5
-  m_Name: LowBatery
+  m_Name: LowBateryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1790511918194214
 GameObject:
   m_ObjectHideFlags: 0

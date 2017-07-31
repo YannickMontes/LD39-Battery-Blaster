@@ -8,8 +8,9 @@ public class PlayerInput : MonoBehaviour {
     public bool gIsDown;
     public float rollingFaceLimit;
     public float energyGain;
-    public Image key1;
-    public Image key2;
+    public GameObject reloadingUI;
+    private Image key1;
+    private Image key2;
     public Color lowAlpha = new Color(1.0f, 1.0f, 1.0f, 0.25f);
     public Color highAlpha = new Color(1.0f, 1.0f, 1.0f, 1.0f);
 
@@ -18,6 +19,8 @@ public class PlayerInput : MonoBehaviour {
     {
         gIsDown = false;
         InvokeRepeating("CheckRollingFaceRate", 0.0f, rollingFaceLimit);
+        key1 = reloadingUI.transform.Find("Key1").GetComponent<Image>();
+        key2 = reloadingUI.transform.Find("Key3").GetComponent<Image>();
         key1.color = highAlpha;
         key2.color = lowAlpha;
     }
@@ -27,6 +30,7 @@ public class PlayerInput : MonoBehaviour {
     {
         if (!gIsDown && Input.GetKeyDown(KeyCode.Alpha1))
         {
+            Terminator.GetTerminator().isRecharging = true;
             gIsDown = true;
             key1.color = lowAlpha;
             key2.color = highAlpha;
@@ -54,6 +58,7 @@ public class PlayerInput : MonoBehaviour {
             gIsDown = false;
             key1.color = highAlpha;
             key2.color = lowAlpha;
+            Terminator.GetTerminator().isRecharging = false;
         }
     }
 }
