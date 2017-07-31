@@ -86,10 +86,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4636291369464424}
   - component: {fileID: 54395598927153678}
-  - component: {fileID: 65079911358824802}
-  - component: {fileID: 114512240681757990}
-  - component: {fileID: 114110901579232934}
   - component: {fileID: 114107324880189544}
+  - component: {fileID: 114966695313805632}
+  - component: {fileID: 114654982616172440}
+  - component: {fileID: 114294585608016550}
+  - component: {fileID: 65803094039654500}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -455,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104949997642606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -114.067924, y: 0.71088123, z: 11.062786}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4636291369464424}
@@ -470,7 +471,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1154390035802460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4217120663300814}
@@ -1129,7 +1130,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!65 &65079911358824802
+--- !u!65 &65803094039654500
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1139,8 +1140,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1362782, y: 0.7258847, z: 2.0462997}
-  m_Center: {x: 0.294528, y: -0.17552936, z: 0.024797082}
+  m_Size: {x: 2.3, y: 1, z: 2}
+  m_Center: {x: 0.25, y: -0.2, z: 0}
 --- !u!95 &95763214345887066
 Animator:
   serializedVersion: 3
@@ -1172,23 +1173,6 @@ MonoBehaviour:
   agent: {fileID: 4335818932802430}
   moveSpeed: 5
   distanceToAgent: 5
---- !u!114 &114110901579232934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1154390035802460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd44f85462cac1b47a71af30ffe9536e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 11
-  delay: 2
-  damage: 1
-  flashGo: {fileID: 1733104761929166, guid: a05e39cf3c9777e489de2d5ffa2a9335, type: 2}
-  flash_position_L: {fileID: 0}
-  flash_position_R: {fileID: 0}
 --- !u!114 &114266981569222802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1201,7 +1185,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
---- !u!114 &114512240681757990
+--- !u!114 &114294585608016550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154390035802460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44f85462cac1b47a71af30ffe9536e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  delay: 2
+  damage: 1
+  flashGo: {fileID: 1733104761929166, guid: a05e39cf3c9777e489de2d5ffa2a9335, type: 2}
+  flash_position_L: {fileID: 0}
+  flash_position_R: {fileID: 0}
+--- !u!114 &114654982616172440
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1216,6 +1217,19 @@ MonoBehaviour:
   isBoss: 0
   boomParticlesEffectPrefab: {fileID: 1680058025826580, guid: 2bb96be27f1d5d94c8b8310d673b4670,
     type: 2}
+--- !u!114 &114966695313805632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154390035802460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b970a842e8ba4f4e82a0822798a7a40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAtMainCamera: 1
+  target: {fileID: 0}
 --- !u!195 &195834220890114166
 NavMeshAgent:
   m_ObjectHideFlags: 1

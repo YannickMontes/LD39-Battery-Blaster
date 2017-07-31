@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnnemySpawner : MonoBehaviour {
 
@@ -34,15 +35,20 @@ public class EnnemySpawner : MonoBehaviour {
             }
             else
             {
-                GameObject en = Instantiate(ennemy);
-                en.GetComponent<EnnemyMovement>().onlyChase = true;
-                en.transform.position = new Vector3(this.transform.position.x, Random.Range(1, 7), this.transform.position.z);
-                en.transform.LookAt(Terminator.GetTerminator().transform);
-                en.GetComponent<Target>().SetDoorKeeper(this.doorKeeper);
-                doorKeeper.AddToEnnemiesInRoom(en);
+                GameObject en = Instantiate(ennemy, new Vector3(this.transform.position.x, 0.0f, this.transform.position.z), Quaternion.identity);
+                Transform drone = en.transform.Find("Drone");
+                drone.localPosition = Vector3.up * Random.Range(1.5f, 8.0f);
+                drone.GetComponent<Target>().SetDoorKeeper(this.doorKeeper);
+                AddSpawnedEnnemyToDoorKeeper(en);
             }
             currentGeneration++;
         }
+    }
+
+    private void AddSpawnedEnnemyToDoorKeeper(GameObject go)
+    {
+        if(doorKeeper != null)
+            doorKeeper.AddToEnnemiesInRoom(go);
     }
 
     public void TurnGenerateOn()

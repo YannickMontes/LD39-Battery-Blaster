@@ -6270,7 +6270,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509496016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.2, y: -11.2, z: 48.1}
+  m_LocalPosition: {x: -19.2, y: 0, z: 48.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1894599445}
@@ -10216,29 +10216,6 @@ Transform:
   m_Father: {fileID: 736127561}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &836587811 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc,
-    type: 2}
-  m_PrefabInternal: {fileID: 1995604895}
---- !u!114 &836587813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 836587811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abf50cbee3ce0e144a3c492a05be46b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  efxBlasterSource: {fileID: 0}
-  efxRokketSource: {fileID: 0}
-  efxGBlasterLoadSource: {fileID: 0}
-  efxGBlasterShootSource: {fileID: 0}
-  musicSource: {fileID: 0}
-  lowPitchRange: 0.95
-  highPitchRange: 1.05
 --- !u!1 &837336391
 GameObject:
   m_ObjectHideFlags: 0
@@ -24914,53 +24891,6 @@ Transform:
   m_Father: {fileID: 1729784957}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1001 &1995604895
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4634588192425822, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114266981569222802, guid: a4fcedd9942703542b3d24127a60dcfc,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1317029478}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2008029089
 GameObject:
   m_ObjectHideFlags: 0
