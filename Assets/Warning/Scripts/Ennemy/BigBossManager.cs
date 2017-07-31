@@ -9,6 +9,7 @@ public class BigBossManager : MonoBehaviour {
 	public Target SG1;
 	public Target SG2;
 	public Target SG3;
+    public GameObject shield;
 
 
 	bool shield1 = true;
@@ -47,6 +48,8 @@ public class BigBossManager : MonoBehaviour {
 
 		if (!shield1 && !shield2 && !shield3) {
 			invulnerable = false;
+            if (shield != null)
+                Destroy(shield);
 		}
 	}
 
