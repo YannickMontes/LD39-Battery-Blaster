@@ -55,7 +55,6 @@ public class UIBarScript : MonoBehaviour
 
     private float CalculateFillAmountFromValue(float value, float inMin, float inMax)
     {
-        Debug.Log("CALCULATE THIS FUCKING FILL AMOUNT");
         return (value - inMin) / (inMax - inMin);
     }
 }

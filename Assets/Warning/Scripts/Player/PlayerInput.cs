@@ -58,7 +58,7 @@ public class PlayerInput : MonoBehaviour {
             gIsDown = false;
             key1.color = highAlpha;
             key2.color = lowAlpha;
-            Terminator.GetTerminator().isRecharging = false;
         }
+        Terminator.GetTerminator().isRecharging = false;
     }
 }

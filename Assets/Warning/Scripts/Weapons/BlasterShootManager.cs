@@ -39,7 +39,7 @@ public class BlasterShootManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Fire1")  && !isCoroutineActive){
+		if(Input.GetButtonDown("Fire1")  && !isCoroutineActive && !Terminator.GetTerminator().isRecharging){
 			StartCoroutine(StartShooting());
 		}
 
@@ -50,7 +50,7 @@ public class BlasterShootManager : MonoBehaviour {
 
 	IEnumerator StartShooting() {
 		isCoroutineActive = true;
-		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0) {
+		while (Input.GetButton("Fire1") && Terminator.GetTerminator().energy.CurrentValue > 0 && !Terminator.GetTerminator().isRecharging) {
 			Invoke("Stop", delay);
 			SoundManager.instance.playSingle (SoundManager.instance.efxBlasterSource.clip);
 			Shoot ();

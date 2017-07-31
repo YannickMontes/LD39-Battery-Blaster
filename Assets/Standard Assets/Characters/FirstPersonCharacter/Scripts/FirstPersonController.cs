@@ -31,6 +31,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 		public bool canRun = true;
+        public bool isRecharging = false;
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -241,7 +242,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 
-			if (!m_IsWalking && !isDashing && canRun) { // want to dash, not Dashing
+			if (!m_IsWalking && !isDashing && canRun && !isRecharging) { // want to dash, not Dashing
 				//dash
 				PlayBoostAudio ();
 				timeStartDash = Time.time;

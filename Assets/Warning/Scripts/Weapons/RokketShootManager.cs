@@ -20,14 +20,15 @@ public class RokketShootManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetButtonDown("Fire2")  && !isCoroutineActive){
+		if(Input.GetButtonDown("Fire2")  && !isCoroutineActive && !Terminator.GetTerminator().isRecharging)
+        {
 			StartCoroutine(StartShooting());
 		}	
 	}
 
 	IEnumerator StartShooting() {
 		isCoroutineActive = true;
-		while (Input.GetButton("Fire2") && Terminator.GetTerminator().energy.CurrentValue > 0) {
+		while (Input.GetButton("Fire2") && Terminator.GetTerminator().energy.CurrentValue > 0 && !Terminator.GetTerminator().isRecharging) {
 			SoundManager.instance.playSingle (SoundManager.instance.efxRokketSource.clip);
 			Shoot ();
 			yield return new WaitForSeconds(delay);

@@ -37,7 +37,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (Input.GetButtonDown("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
+        if (Input.GetButtonDown("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting && !Terminator.GetTerminator().isRecharging) {
             isLoading = true;
             downTime = Time.time;
             StartCoroutine(StartLoading());
@@ -45,7 +45,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
         }
 
 
-        if (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting) {
+        if (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !isShooting && !Terminator.GetTerminator().isRecharging) {
             float amountPower = Time.time - downTime;
             chargeLight.intensity = Mathf.Clamp(amountPower * 0.5f, 0, 2f);
             chargeParticlesSystem.startSize = Mathf.Clamp(amountPower * 0.5f, 0, 2f);
@@ -67,7 +67,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
         }
 
 
-        if (Input.GetButtonUp("Fire3") && isLoading || isLoading && Terminator.GetTerminator ().energy.CurrentValue <= 0) {
+        if ( (Input.GetButtonUp("Fire3") && isLoading) || (isLoading && Terminator.GetTerminator().energy.CurrentValue <= 0) || (isLoading && Terminator.GetTerminator().isRecharging)) {
             flashCharge.SetActive(false);
 			isShooting = true ;
 			isLoading = false;
@@ -80,7 +80,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	}
 
 	IEnumerator StartLoading() {
-		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0) {
+		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !Terminator.GetTerminator().isRecharging) {
             flashCharge.SetActive(true);
 			SoundManager.instance.playSingle (SoundManager.instance.efxGBlasterLoadSource.clip);
             Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);			

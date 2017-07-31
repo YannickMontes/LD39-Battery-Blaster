@@ -32,6 +32,8 @@ public class Terminator : MonoBehaviour
 			controller.canRun = false;
 		} else
 			controller.canRun = true;
+
+        controller.isRecharging = isRecharging;
 	}
 
 	IEnumerator StartEnergyDrain() {
