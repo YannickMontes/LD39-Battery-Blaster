@@ -45,8 +45,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void RandomizeSfx(AudioSource clip){
-		//float randomPitch = Random.Range (lowPitchRange, highPitchRange);
-		//clip.pitch = randomPitch;
+		float randomPitch = Random.Range (lowPitchRange, highPitchRange);
+		clip.pitch = randomPitch;
 		clip.Play ();
 
 	}
