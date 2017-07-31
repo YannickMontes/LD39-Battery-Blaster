@@ -1641,7 +1641,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553007486338394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 144.9, y: 0, z: -18.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4423969204125982}
@@ -4007,7 +4007,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.827
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4016,7 +4016,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1.7236519
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -4412,7 +4412,7 @@ MonoBehaviour:
   radius: 1
   fpsCamera: {fileID: 20555525725935846}
   damagePerTic: 30
-  ticsDelay: 0.5
+  ticsDelay: 0.25
   upperSize: 1
   sideSize: 1
 --- !u!114 &114451588651176306
@@ -4421,7 +4421,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1508750976609690}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -4525,10 +4525,11 @@ MonoBehaviour:
     BobAmount: 0.1
   m_StepInterval: 5
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: 79bcfd596da04d04b918b88cfcd62170, type: 3}
+  - {fileID: 8300000, guid: 00ced8958e1cfd0448d7090d5f4bd804, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  m_BoostSound: {fileID: 8300000, guid: e5e9e565348ce8c47a3b61d38c501428, type: 3}
   canRun: 1
   speed: 0
 --- !u!114 &114711218809862774
@@ -4595,7 +4596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyCostPerSec: 0.5
-  damage: 10
+  damage: 5
   range: 100
   particlesFireSpark: {fileID: 1772819581313612, guid: 3e07cde39c2da664e9f8e71923bdfa21,
     type: 2}

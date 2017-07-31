@@ -13791,27 +13791,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 82301748540614284, guid: f2bcd1fbe8022c74e800cd3536249272,
         type: 2}
-      propertyPath: MaxDistance
-      value: 1.7236519
-      objectReference: {fileID: 0}
-    - target: {fileID: 114451588651176306, guid: f2bcd1fbe8022c74e800cd3536249272,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4423969204125982, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114845226302828788, guid: f2bcd1fbe8022c74e800cd3536249272,
-        type: 2}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114236434124063326, guid: f2bcd1fbe8022c74e800cd3536249272,
-        type: 2}
-      propertyPath: ticsDelay
-      value: 0.25
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
