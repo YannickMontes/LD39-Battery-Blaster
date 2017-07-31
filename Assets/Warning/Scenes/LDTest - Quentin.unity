@@ -13804,6 +13804,11 @@ Prefab:
       propertyPath: DashTime
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114711218809862774, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: runningDrainPerSec
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
   m_IsPrefabParent: 0

@@ -20,9 +20,11 @@ public class PlayerShadow : MonoBehaviour {
 	void Start ()
 	{
 		isChasing = false;
+
 		this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		this.player = this.player.GetChild (0);
 		this.direction = 1;
+		this.transform.position = player.position;
 		this.destination = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 		PlayerShadowCurrent = this;
 	}

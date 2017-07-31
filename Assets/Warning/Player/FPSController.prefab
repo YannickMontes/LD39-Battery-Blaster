@@ -4547,7 +4547,7 @@ MonoBehaviour:
   hp:
     currentValue: 100
     maxValue: 100
-  runningDrainPerSec: 20
+  runningDrainPerSec: 10
   energy:
     currentValue: 100
     maxValue: 100
