@@ -25,12 +25,12 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		/*if (BigBossManager.bbm == null && !endGame) {
+		if (BigBossManager.bbm == null && !endGame) {
 			Victory ();
 		}
-		if (BigBossManager.bbm.lifePoints <= 0 && !endGame) {
+		/*if (BigBossManager.bbm.lifePoints <= 0 && !endGame) {
 			Victory ();
-		}*/
+		}s****/
 
 		if (Terminator.GetTerminator ().hp.CurrentValue <= 0 && !endGame) {
 			GameOver ();

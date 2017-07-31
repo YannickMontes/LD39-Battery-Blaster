@@ -326,7 +326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1862100122251084, guid: ba15113969aa1284db6d3220d249f433, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba15113969aa1284db6d3220d249f433, type: 2}
@@ -12526,6 +12526,21 @@ Prefab:
       propertyPath: SG3
       value: 
       objectReference: {fileID: 1698266948}
+    - target: {fileID: 195194693594381428, guid: e8bf156b1a4d7cf44804afe9e298227c,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 195194693594381428, guid: e8bf156b1a4d7cf44804afe9e298227c,
+        type: 2}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 195194693594381428, guid: e8bf156b1a4d7cf44804afe9e298227c,
+        type: 2}
+      propertyPath: m_Acceleration
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8bf156b1a4d7cf44804afe9e298227c, type: 2}
   m_IsPrefabParent: 0
@@ -12911,7 +12926,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 202.5
+      value: -146.7
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.y
@@ -12919,7 +12934,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -17.5
+      value: 176.3
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalRotation.x
@@ -25292,6 +25307,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1574339306}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1575223325 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1860054591367158, guid: e8bf156b1a4d7cf44804afe9e298227c,
+    type: 2}
+  m_PrefabInternal: {fileID: 831666023}
+--- !u!114 &1575223333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1575223325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aef487c7a90a3a4eaad8bc75512587f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  isBoss: 1
+  isPlayer: 0
+  boomParticlesEffectPrefab: {fileID: 0}
 --- !u!1 &1579382505
 GameObject:
   m_ObjectHideFlags: 0
