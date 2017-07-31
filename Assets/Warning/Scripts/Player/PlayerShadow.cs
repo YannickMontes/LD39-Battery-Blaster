@@ -21,6 +21,7 @@ public class PlayerShadow : MonoBehaviour {
 	{
 		isChasing = false;
 		this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+		this.player = this.player.GetChild (0);
 		this.direction = 1;
 		this.destination = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 		PlayerShadowCurrent = this;
@@ -31,6 +32,7 @@ public class PlayerShadow : MonoBehaviour {
 	{
 		CheckForPlayer();
 		Move();
+
 	}
 
 	public static PlayerShadow GetShadow(){
@@ -60,7 +62,7 @@ public class PlayerShadow : MonoBehaviour {
 		if (Vector3.Distance (player.position, this.transform.position) > maxDistance) {
 			moveSpeed*=2;
 		}
-
+	
 	}
 
 	private Vector3 MoveNormaly()
