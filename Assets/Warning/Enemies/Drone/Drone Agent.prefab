@@ -1186,7 +1186,7 @@ MonoBehaviour:
   range: 11
   delay: 2
   damage: 1
-  flashGo: {fileID: 0}
+  flashGo: {fileID: 1733104761929166, guid: a05e39cf3c9777e489de2d5ffa2a9335, type: 2}
   flash_position_L: {fileID: 0}
   flash_position_R: {fileID: 0}
 --- !u!114 &114266981569222802
