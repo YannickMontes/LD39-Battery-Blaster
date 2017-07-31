@@ -7659,6 +7659,22 @@ MonoBehaviour:
   beginTime: 1
   currentGeneration: 0
   spawnDelay: 0.1
+--- !u!1 &436854350 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1708159044851422, guid: 4b8dc3a229f55284ea75b44ed1da03d6,
+    type: 2}
+  m_PrefabInternal: {fileID: 461673444}
+--- !u!114 &436854352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436854350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8ed1811e1b747e4ba468c8ee4cb3b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &439347190
 GameObject:
   m_ObjectHideFlags: 0
