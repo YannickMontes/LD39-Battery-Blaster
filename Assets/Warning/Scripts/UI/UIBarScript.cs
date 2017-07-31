@@ -28,7 +28,8 @@ public class UIBarScript : MonoBehaviour
         set
         {
             fillValue = CalculateFillAmountFromValue(value, 0, MaxValue);
-            textValue.text = value.ToString();
+            if(textValue != null)
+                textValue.text = value.ToString();
         }
     }
 
