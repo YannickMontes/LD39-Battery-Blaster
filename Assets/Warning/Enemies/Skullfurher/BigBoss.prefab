@@ -786,6 +786,7 @@ GameObject:
   - component: {fileID: 114209936617194954}
   - component: {fileID: 65322654400927836}
   - component: {fileID: 114366946107942434}
+  - component: {fileID: 114065167070079180}
   m_Layer: 0
   m_Name: Skullfurher
   m_TagString: Untagged
@@ -805,6 +806,21 @@ GameObject:
   - component: {fileID: 23940190511424260}
   m_Layer: 0
   m_Name: Cube_010
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1898758079934456
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4713323881002258}
+  m_Layer: 0
+  m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1115,6 +1131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4379464049009952}
+  - {fileID: 4713323881002258}
   m_Father: {fileID: 4741002258818894}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1404,6 +1421,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4379464049009952}
   m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4713323881002258
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1898758079934456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4415052086993518}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4737042478650452
 Transform:
@@ -3231,6 +3261,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114065167070079180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860054591367158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd44f85462cac1b47a71af30ffe9536e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  delay: 1
+  damage: 5
+  flashGo: {fileID: 1733104761929166, guid: a05e39cf3c9777e489de2d5ffa2a9335, type: 2}
+  flash_position_L: {fileID: 4713323881002258}
+  flash_position_R: {fileID: 4713323881002258}
 --- !u!114 &114121661097637658
 MonoBehaviour:
   m_ObjectHideFlags: 1

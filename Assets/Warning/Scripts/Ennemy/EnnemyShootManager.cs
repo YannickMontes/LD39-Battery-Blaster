@@ -55,7 +55,7 @@ public class EnnemyShootManager : MonoBehaviour {
 		if (Physics.Raycast (this.transform.position, aim , out hitPoint, range)) {
 			Target target = hitPoint.transform.GetComponent<Target> ();
 			//Debug.Log (hitPoint.transform.position + " " + hitPoint.transform.name);
-			//Debug.DrawRay (this.transform.position, aim, Color.green);
+			Debug.DrawRay (this.transform.position, aim, Color.green);
 			if (target != null) {
 				if(target.isPlayer){
 					Terminator.GetTerminator ().DecreaseHP (damage);
