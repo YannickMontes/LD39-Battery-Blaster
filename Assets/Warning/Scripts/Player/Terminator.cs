@@ -19,7 +19,8 @@ public class Terminator : MonoBehaviour
 		TerminatorCurrent = this;
         this.isRecharging = false;
         this.energy.Bar = GameObject.Find("EnergyBar").GetComponent<UIBarScript>();
-	}
+        this.hp.Bar = GameObject.Find("HealthBar").GetComponent<UIBarScript>();
+    }
 
 	// Update is called once per frame
 	void Update ()

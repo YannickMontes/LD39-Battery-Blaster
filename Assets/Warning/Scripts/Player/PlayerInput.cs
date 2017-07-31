@@ -11,8 +11,8 @@ public class PlayerInput : MonoBehaviour {
     public GameObject reloadingUI;
     private Image key1;
     private Image key2;
-    public Color lowAlpha = new Color(1.0f, 1.0f, 1.0f, 0.25f);
-    public Color highAlpha = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+    public Color lowAlpha = new Color(0.0f, 1.0f, 0.0f, 0.25f);
+    public Color highAlpha = new Color(0.0f, 1.0f, 0.0f, 1.0f);
 
     // Use this for initialization
     void Start ()
