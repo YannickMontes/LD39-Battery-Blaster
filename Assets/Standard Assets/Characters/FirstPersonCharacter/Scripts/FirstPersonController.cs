@@ -167,11 +167,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-			if (m_IsWalking) {
+			if (m_IsWalking && !isDashing) {
 				PlayFootStepAudio ();
 			}				
-			else
-				PlayBoostAudio ();
+
+				
         }
 
 
@@ -243,6 +243,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			if (!m_IsWalking && !isDashing && canRun) { // want to dash, not Dashing
 				//dash
+				PlayBoostAudio ();
 				timeStartDash = Time.time;
 				speed = m_RunSpeed;
 				isDashing = true;

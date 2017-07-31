@@ -55,10 +55,7 @@ public class PlayerShadow : MonoBehaviour {
 		{
 			transform.position += (moving * Time.deltaTime * moveSpeed);
 		}
-		else
-		{
-			this.GetComponent<Rigidbody>().velocity = Vector3.zero;
-		}
+
 	
 
 		if (Vector3.Distance (player.position, this.transform.position) > maxDistance) {
