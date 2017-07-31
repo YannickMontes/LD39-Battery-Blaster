@@ -10,6 +10,7 @@ public class PlayerShadow : MonoBehaviour {
 	public float distanceToPlayer = 0.0f;
 	public bool onlyChase;
 	private bool isChasing;
+	static PlayerShadow PlayerShadowCurrent;
 
 	private int direction;
 
@@ -22,6 +23,7 @@ public class PlayerShadow : MonoBehaviour {
 		this.player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		this.direction = 1;
 		this.destination = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+		PlayerShadowCurrent = this;
 	}
 
 	// Update is called once per frame
@@ -31,6 +33,11 @@ public class PlayerShadow : MonoBehaviour {
 
 		Move();
 	}
+
+	public static PlayerShadow GetShadow(){
+		return PlayerShadowCurrent;
+	}
+
 
 	private void Move()
 	{

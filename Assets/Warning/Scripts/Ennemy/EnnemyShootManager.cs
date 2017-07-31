@@ -47,6 +47,26 @@ public class EnnemyShootManager : MonoBehaviour {
 		flash_R.transform.forward = flash_position_R.forward;
 		flash_R.Play ();
 
-		Terminator.GetTerminator ().DecreaseHP (damage);
+		RaycastHit hitPoint;
+		Vector3 shadowPosition;
+		shadowPosition = PlayerShadow.GetShadow ().transform.position;
+
+		Vector3 aim = shadowPosition - this.transform.position;
+		if (Physics.Raycast (this.transform.position, aim , out hitPoint, range)) {
+			Target target = hitPoint.transform.GetComponent<Target> ();
+			//Debug.Log (hitPoint.transform.position + " " + hitPoint.transform.name);
+			//Debug.DrawRay (this.transform.position, aim, Color.green);
+			if (target != null) {
+				if(target.isPlayer){
+					Terminator.GetTerminator ().DecreaseHP (damage);
+				}
+
+			}
+					//player screen shaken
+		}
+
+
+
+
 	}
 }

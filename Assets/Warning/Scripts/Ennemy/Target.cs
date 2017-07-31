@@ -7,6 +7,7 @@ public class Target : MonoBehaviour {
 	public float health = 50f;
     private DoorKeeper doorKeeper;
 	public bool isBoss = false;
+	public bool isPlayer = false;
     public GameObject boomParticlesEffectPrefab;
 
 	public void TakeDamage(float amount){
@@ -17,7 +18,7 @@ public class Target : MonoBehaviour {
 					Die ();
 				}
 			}
-		} else {
+		} else if(!isPlayer){
 			health -= amount;
 			if (health <= 0f) {
 				Die ();
