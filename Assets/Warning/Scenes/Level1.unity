@@ -478,6 +478,32 @@ Prefab:
       propertyPath: maxRectsOnScreen
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114297682282071012, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 64baba9de219e6a46830ff34c5eac5ad,
+        type: 3}
+    - target: {fileID: 224887504018761974, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003614005818064, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 224887504018761974, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -122
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003614005818064, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 131
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba15113969aa1284db6d3220d249f433, type: 2}
   m_IsPrefabParent: 0
