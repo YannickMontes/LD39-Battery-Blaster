@@ -28,7 +28,7 @@ public class RokketShootManager : MonoBehaviour {
 	IEnumerator StartShooting() {
 		isCoroutineActive = true;
 		while (Input.GetButton("Fire2") && Terminator.GetTerminator().energy.CurrentValue > 0) {
-			SoundManager.instance.playSingle (SoundManager.instance.efxRokketSource.clip);
+			SoundManager.instance.playRokket ();
 			Shoot ();
 			yield return new WaitForSeconds(delay);
 		}
