@@ -77,9 +77,5 @@ public class Terminator : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        GUI.Label(new Rect(20, 10, 100, 20), "HP: "+this.hp.CurrentValue);
-        GUI.Label(new Rect(20, 30, 200, 20), "ENERGY: " + this.energy.CurrentValue);
-    }
+
 }
