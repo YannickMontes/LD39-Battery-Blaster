@@ -82,7 +82,7 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	IEnumerator StartLoading() {
 		while (Input.GetButton("Fire3") && Terminator.GetTerminator().energy.CurrentValue > 0 && !Terminator.GetTerminator().isRecharging) {
             flashCharge.SetActive(true);
-			SoundManager.instance.playSingle (SoundManager.instance.efxGBlasterLoadSource.clip);
+			SoundManager.instance.playGBlasterLoad ();
             Terminator.GetTerminator ().DecreaseEnergy (CostPerSec);			
 			yield return new WaitForSeconds(1.0f);
 		}
@@ -91,7 +91,8 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 	IEnumerator StartShooting() {
 		while (isShooting ) {
 			flashShoot.SetActive(true);
-			SoundManager.instance.playSingle (SoundManager.instance.efxGBlasterShootSource.clip);
+			SoundManager.instance.stopGBlasterLoad ();
+			SoundManager.instance.playGBlasterShoot ();
 			Shoot ();
 			yield return new WaitForSeconds(ticsDelay);
 		}

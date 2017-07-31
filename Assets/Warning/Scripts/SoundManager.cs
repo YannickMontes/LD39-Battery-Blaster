@@ -24,19 +24,30 @@ public class SoundManager : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 	}
 
-	public void playSingle(AudioClip clip){
-		efxBlasterSource.clip = clip;
-		efxBlasterSource.Play ();
+	public void playBlaster(){
+		RandomizeSfx (efxBlasterSource);
 	}
 
-	public void RandomizeSfx(params AudioClip [] clips){
-		
-		int randomIndex = 0;//Random.Range (0, clips.Length);
-		float randomPitch = Random.Range (lowPitchRange, highPitchRange);
+	public void playRokket(){
+		RandomizeSfx (efxRokketSource);
+	}
 
-		efxBlasterSource.pitch = randomPitch;
-		efxBlasterSource.clip = clips [randomIndex];
-		efxBlasterSource.Play ();
+	public void playGBlasterLoad(){
+		RandomizeSfx (efxGBlasterLoadSource);
+	}
+
+	public void stopGBlasterLoad(){
+		efxGBlasterLoadSource.Stop();
+	}
+
+	public void playGBlasterShoot(){
+		RandomizeSfx (efxGBlasterShootSource);
+	}
+
+	public void RandomizeSfx(AudioSource clip){
+		//float randomPitch = Random.Range (lowPitchRange, highPitchRange);
+		//clip.pitch = randomPitch;
+		clip.Play ();
 
 	}
 
