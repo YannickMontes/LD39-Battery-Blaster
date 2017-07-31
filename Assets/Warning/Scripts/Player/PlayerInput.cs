@@ -42,13 +42,6 @@ public class PlayerInput : MonoBehaviour {
             key1.color = highAlpha;
             key2.color = lowAlpha;
         }
-
-        // CHEAT TO REMOVE
-
-        if (Input.GetKeyDown(KeyCode.KeypadPlus))
-        {
-            Terminator.GetTerminator().energy.CurrentValue = 100;
-        }
 	}
 
     private void CheckRollingFaceRate()
