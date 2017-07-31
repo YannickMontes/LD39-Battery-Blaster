@@ -23,7 +23,10 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Terminator.GetTerminator () == null && !endGame) {
+		if (BigBossManager.bbm == null && !endGame) {
+			Victory ();
+		}
+		if (BigBossManager.bbm.lifePoints <= 0 && !endGame) {
 			Victory ();
 		}
 	}
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Victory(){
+		endGame = true;
 		EndTimer = Time.time;
 		timer = EndTimer - StartTimer;
 		if (!VictoryPanel.activeSelf) {
