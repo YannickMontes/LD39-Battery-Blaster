@@ -19,12 +19,12 @@ public class FollowAgent : MonoBehaviour {
 	void Update ()
     {
         float bonus = 1.0f;
-        float distance = Vector3.Distance(this.transform.position, this.agent.position);
+        float distance = Vector3.Distance(this.transform.position, new Vector3(this.agent.position.x, this.transform.position.y, this.agent.position.z));
         if (distance > 50.0f)
         {
             bonus = 4;
         }
-        if (Vector3.Distance(this.transform.position, this.agent.position) > distanceToAgent)
+        if (distance > distanceToAgent)
         {
             Vector3 direction = agent.transform.position - this.transform.position;
             direction = direction.normalized;
