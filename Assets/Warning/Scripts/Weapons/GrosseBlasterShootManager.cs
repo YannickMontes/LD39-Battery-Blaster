@@ -125,7 +125,6 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 			if (targets != null) {
 				if (target != null) {
 					if (!targets.Contains (target)) {
-						Debug.Log ("tape.");
 						targets.Add (target);
 					}
 				}
@@ -137,7 +136,6 @@ public class GrosseBlasterShootManager : MonoBehaviour {
 
             foreach (Target target in targets) {
 				if (target != null) {
-					Debug.Log ("hit.");
 					target.TakeDamage (damagePerTic);
 				}
 			}
