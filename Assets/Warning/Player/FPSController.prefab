@@ -4519,7 +4519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 10
+  m_WalkSpeed: 12
   m_RunSpeed: 80
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_JumpBob:
     BobDuration: 0.2
     BobAmount: 0.1
-  m_StepInterval: 10
+  m_StepInterval: 12
   m_FootstepSounds:
   - {fileID: 8300000, guid: 79bcfd596da04d04b918b88cfcd62170, type: 3}
   - {fileID: 8300000, guid: 00ced8958e1cfd0448d7090d5f4bd804, type: 3}
@@ -4613,6 +4613,8 @@ MonoBehaviour:
   canRun: 1
   isRecharging: 0
   speed: 0
+  canDash: 1
+  isDashing: 0
   DashTime: 0.3
 --- !u!114 &114711218809862774
 MonoBehaviour:
@@ -4626,8 +4628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp:
-    currentValue: 500
-    maxValue: 500
+    currentValue: 1000
+    maxValue: 1000
   runningDrainPerSec: 10
   energy:
     currentValue: 100
