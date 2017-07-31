@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
-
+	public AudioSource russianSource;
 	public AudioSource efxBlasterSource;
 	public AudioSource efxRokketSource;
 	public AudioSource efxGBlasterLoadSource;

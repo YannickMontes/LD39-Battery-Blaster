@@ -1954,12 +1954,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 100814333}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114638112 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114121661097637658, guid: e8bf156b1a4d7cf44804afe9e298227c,
-    type: 2}
-  m_PrefabInternal: {fileID: 77867514}
-  m_Script: {fileID: 11500000, guid: eafb3e13525804740a47ae3fa74077d3, type: 3}
 --- !u!1 &116294837
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,8 +2523,8 @@ GameObject:
   - component: {fileID: 145643977}
   - component: {fileID: 145643976}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2561,7 +2555,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3134,7 +3128,7 @@ GameObject:
   - component: {fileID: 210618589}
   m_Layer: 0
   m_Name: Door 3
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3167,7 +3161,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4094,6 +4088,91 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291385947}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &295492538 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1818304817735804, guid: fdeec35fa3c43344e895fe906296cc27,
+    type: 2}
+  m_PrefabInternal: {fileID: 919465172}
+--- !u!82 &295492539
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 295492538}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 333a2012e51da3746a777f6ccadf6be6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &299719831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6610,7 +6689,7 @@ GameObject:
   - component: {fileID: 445678391}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6643,7 +6722,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7795,8 +7874,8 @@ GameObject:
   - component: {fileID: 517316989}
   - component: {fileID: 517316988}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8627,7 +8706,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8954,7 +9033,7 @@ GameObject:
   - component: {fileID: 575979279}
   m_Layer: 0
   m_Name: Door 2
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8987,7 +9066,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10449,7 +10528,7 @@ GameObject:
   - component: {fileID: 687829806}
   m_Layer: 0
   m_Name: Door 2
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10482,7 +10561,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13989,6 +14068,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 82535128707651802, guid: fdeec35fa3c43344e895fe906296cc27,
+        type: 2}
+      propertyPath: spreadCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114456812247793280, guid: fdeec35fa3c43344e895fe906296cc27,
+        type: 2}
+      propertyPath: russianSource
+      value: 
+      objectReference: {fileID: 295492539}
+    - target: {fileID: 82535128707651802, guid: fdeec35fa3c43344e895fe906296cc27,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.323
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fdeec35fa3c43344e895fe906296cc27, type: 2}
   m_IsPrefabParent: 0
@@ -15919,7 +16013,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18286,7 +18380,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18644,8 +18738,8 @@ GameObject:
   - component: {fileID: 1212917960}
   - component: {fileID: 1212917959}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18676,7 +18770,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20662,7 +20756,7 @@ GameObject:
   - component: {fileID: 1345313501}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20695,7 +20789,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22472,8 +22566,8 @@ GameObject:
   - component: {fileID: 1436634725}
   - component: {fileID: 1436634724}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23415,7 +23509,7 @@ GameObject:
   - component: {fileID: 1490900609}
   m_Layer: 0
   m_Name: Door 3
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23448,7 +23542,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23589,7 +23683,7 @@ GameObject:
   - component: {fileID: 1501543836}
   m_Layer: 0
   m_Name: Door (2)
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23622,7 +23716,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26469,7 +26563,7 @@ GameObject:
   - component: {fileID: 1713926475}
   m_Layer: 0
   m_Name: Door (1)
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26502,7 +26596,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26554,8 +26648,8 @@ GameObject:
   - component: {fileID: 1715437974}
   - component: {fileID: 1715437973}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27325,8 +27419,8 @@ GameObject:
   - component: {fileID: 1756628347}
   - component: {fileID: 1756628346}
   m_Layer: 0
-  m_Name: Door
-  m_TagString: Door
+  m_Name: Cube
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27357,7 +27451,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32310,7 +32404,7 @@ GameObject:
   - component: {fileID: 2052375129}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Door
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32343,7 +32437,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
+  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33005,23 +33099,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2106351704}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2106457106 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1860054591367158, guid: e8bf156b1a4d7cf44804afe9e298227c,
-    type: 2}
-  m_PrefabInternal: {fileID: 77867514}
---- !u!114 &2106457116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2106457106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fb8d61ecaba2c6468d5337e8306afc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bigBossAgent: {fileID: 114638112}
 --- !u!1 &2106862213
 GameObject:
   m_ObjectHideFlags: 0
