@@ -21,5 +21,11 @@ public class EnnemyNavMeshAgent : MonoBehaviour {
     {
         if(move)
             agent.SetDestination(target.position);
-	}
+
+        float dist = agent.remainingDistance;
+        if (dist != Mathf.Infinity && agent.pathStatus == NavMeshPathStatus.PathComplete && agent.remainingDistance == 0 && target.tag !="Player")
+        {
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        }
+    }
 }
