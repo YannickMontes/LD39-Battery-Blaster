@@ -46,8 +46,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 		public float speed;
-
-		private bool isDashing = false;
+		public bool canDash = true;
+		public bool isDashing = false;
 		float timeStartDash = 0;
 		float timeEndDash = 0;
 		public float DashTime = 0.5f;
@@ -236,22 +236,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-           	 m_IsWalking = !Input.GetKeyDown(KeyCode.LeftShift);
+           	m_IsWalking = !Input.GetKeyDown(KeyCode.LeftShift);
 
 #endif
 
 
 
-            if (!m_IsWalking && !isDashing && canRun && !isRecharging)
+			if (!m_IsWalking && !isDashing && canRun && !isRecharging && canDash)
             { // want to dash, not Dashing
               //dash
                 PlayBoostAudio();
+
                 timeStartDash = Time.time;
                 speed = m_RunSpeed;
                 isDashing = true;
             }
             else if (isDashing)
             { // if dashing
+				
                 timeEndDash = Time.time;
                 if (timeEndDash - timeStartDash >= DashTime)
                 { //check if dash is over
@@ -264,6 +266,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else if (isRecharging)
             {
                 speed = 0;
+				isDashing = false;
             }
             else
                 speed = m_WalkSpeed;

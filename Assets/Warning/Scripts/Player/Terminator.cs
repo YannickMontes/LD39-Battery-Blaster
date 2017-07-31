@@ -39,9 +39,12 @@ public class Terminator : MonoBehaviour
 
 	IEnumerator StartEnergyDrain() {
 		isCoroutineActive = true;
+
 		while (!controller.m_IsWalking && energy.CurrentValue > 0) {
+			controller.canDash = false;
 			DecreaseEnergy (runningDrainPerSec);
-			yield return new WaitForSeconds(1.0f);
+			yield return new WaitForSeconds(controller.DashTime);
+			controller.canDash = true;
 		}
 		isCoroutineActive = false;
 	}
