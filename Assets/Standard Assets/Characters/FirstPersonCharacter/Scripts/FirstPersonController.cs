@@ -242,24 +242,31 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 
-			if (!m_IsWalking && !isDashing && canRun && !isRecharging) { // want to dash, not Dashing
-				//dash
-				PlayBoostAudio ();
-				timeStartDash = Time.time;
-				speed = m_RunSpeed;
-				isDashing = true;
-			} 
-			else if (isDashing) { // if dashing
-				timeEndDash = Time.time;
-				if (timeEndDash - timeStartDash >= DashTime) { //check if dash is over
-					//end dash
-					speed = m_WalkSpeed;
-					//makes dash available
-					isDashing = false;
-				}
-			} 
-			else
-				speed = m_WalkSpeed;
+            if (!m_IsWalking && !isDashing && canRun && !isRecharging)
+            { // want to dash, not Dashing
+              //dash
+                PlayBoostAudio();
+                timeStartDash = Time.time;
+                speed = m_RunSpeed;
+                isDashing = true;
+            }
+            else if (isDashing)
+            { // if dashing
+                timeEndDash = Time.time;
+                if (timeEndDash - timeStartDash >= DashTime)
+                { //check if dash is over
+                  //end dash
+                    speed = m_WalkSpeed;
+                    //makes dash available
+                    isDashing = false;
+                }
+            }
+            else if (isRecharging)
+            {
+                speed = 0;
+            }
+            else
+                speed = m_WalkSpeed;
             
 	
 
