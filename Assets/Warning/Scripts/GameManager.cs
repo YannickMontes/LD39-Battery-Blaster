@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 			Victory ();
 		}*/
 
-		if (Terminator.GetTerminator ().hp <= 0 && !endGame) {
+		if (Terminator.GetTerminator ().hp.CurrentValue <= 0 && !endGame) {
 			GameOver ();
 		}
 	}

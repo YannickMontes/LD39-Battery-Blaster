@@ -52,5 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VictoryPanel: {fileID: 0}
+  GOPanel: {fileID: 0}
   score: {fileID: 0}
+  controller: {fileID: 0}
   timer: 0
