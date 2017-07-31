@@ -45,6 +45,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 		public float speed;
+
+		private bool isDashing = false;
+		float timeStartDash = 0;
+		float timeEndDash = 0;
+		public float DashTime = 0.5f;
+
+
         // Use this for initialization
         private void Start()
         {
@@ -93,16 +100,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource.Play();
             m_NextStep = m_StepCycle + .5f;
         }
-
-
+			
         private void FixedUpdate()
         {
-			GetInput(out speed);
-			if (!m_IsWalking) {
-				if (!canRun ) {
-					speed = m_WalkSpeed;
-				}
-			}
+			GetInput();
+
 		
            		
             // always move along the camera forward as it is the direction that it being aimed at
@@ -220,8 +222,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void GetInput(out float speed)
+        private void GetInput()
         {
+
+			
             // Read input
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
@@ -231,10 +235,33 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+           	 m_IsWalking = !Input.GetKeyDown(KeyCode.LeftShift);
+
 #endif
-            // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+
+
+
+			if (!m_IsWalking && !isDashing && canRun) { // want to dash, not Dashing
+				//dash
+				timeStartDash = Time.time;
+				speed = m_RunSpeed;
+				isDashing = true;
+			} 
+			else if (isDashing) { // if dashing
+				timeEndDash = Time.time;
+				if (timeEndDash - timeStartDash >= DashTime) { //check if dash is over
+					//end dash
+					speed = m_WalkSpeed;
+					//makes dash available
+					isDashing = false;
+				}
+			} 
+			else
+				speed = m_WalkSpeed;
+            
+	
+
+
             m_Input = new Vector2(horizontal, vertical);
 
             // normalize input if it exceeds 1 in combined length:

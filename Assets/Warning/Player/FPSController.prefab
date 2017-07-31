@@ -4007,7 +4007,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.827
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4440,7 +4440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsWalking: 0
   m_WalkSpeed: 5
-  m_RunSpeed: 15
+  m_RunSpeed: 80
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
@@ -4532,6 +4532,7 @@ MonoBehaviour:
   m_BoostSound: {fileID: 8300000, guid: e5e9e565348ce8c47a3b61d38c501428, type: 3}
   canRun: 1
   speed: 0
+  DashTime: 0.3
 --- !u!114 &114711218809862774
 MonoBehaviour:
   m_ObjectHideFlags: 1
