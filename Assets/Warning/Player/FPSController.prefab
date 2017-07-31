@@ -1641,7 +1641,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1553007486338394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 144.9, y: 0, z: -18.7}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4423969204125982}
@@ -4439,7 +4439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
+  m_WalkSpeed: 8
   m_RunSpeed: 80
   m_RunstepLenghten: 0.7
   m_JumpSpeed: 10
@@ -4531,6 +4531,7 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   m_BoostSound: {fileID: 8300000, guid: e5e9e565348ce8c47a3b61d38c501428, type: 3}
   canRun: 1
+  isRecharging: 0
   speed: 0
   DashTime: 0.3
 --- !u!114 &114711218809862774
@@ -4545,8 +4546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp:
-    currentValue: 100
-    maxValue: 100
+    currentValue: 500
+    maxValue: 500
   runningDrainPerSec: 10
   energy:
     currentValue: 100
@@ -4554,6 +4555,7 @@ MonoBehaviour:
   radarRadius: 0
   controller: {fileID: 114532892152660650}
   isAlive: 0
+  isRecharging: 0
 --- !u!114 &114725354431329402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4565,7 +4567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28426aa498009046b1a274177503058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyCost: 10
+  energyCost: 15
   grenadeRB: {fileID: 54126593961611380, guid: 5516d6e6f1cb6ff40b5547e27463eac7, type: 2}
   grenadeLaunchPower: 20
   flash: {fileID: 198060401159894330, guid: 2ec61f632227dab4e8b318b335b4d88a, type: 2}
@@ -4584,7 +4586,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gIsDown: 0
   rollingFaceLimit: 1
-  energyGain: 5
+  energyGain: 7
+  reloadingUI: {fileID: 0}
+  lowAlpha: {r: 1, g: 1, b: 1, a: 0.25}
+  highAlpha: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &114845226302828788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4596,8 +4601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a32903b0009d8746bcb49afe6f0fcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyCostPerSec: 0.5
-  damage: 5
+  energyCostPerSec: 1
+  damage: 10
   range: 100
   particlesFireSpark: {fileID: 1772819581313612, guid: 3e07cde39c2da664e9f8e71923bdfa21,
     type: 2}

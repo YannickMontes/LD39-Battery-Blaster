@@ -3446,7 +3446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e50cac663fe498740a72d77160631581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 200
+  lifePoints: 1000
   SG1: {fileID: 0}
   SG2: {fileID: 0}
   SG3: {fileID: 0}
