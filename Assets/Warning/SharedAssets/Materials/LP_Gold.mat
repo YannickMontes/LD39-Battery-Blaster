@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LP_Red
+  m_Name: LP_Gold
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -72,5 +72,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 0.9191176, g: 0.14868078, b: 0.14868078, a: 1}
+    - _Color: {r: 0.7352941, g: 0.69465154, b: 0.14597751, a: 1}
+    - _EmissionColor: {r: 0.77205884, g: 0.6306452, b: 0.039738316, a: 1}
