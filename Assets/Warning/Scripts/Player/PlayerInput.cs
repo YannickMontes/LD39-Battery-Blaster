@@ -27,6 +27,13 @@ public class PlayerInput : MonoBehaviour {
             gIsDown = false;
             this.gameObject.GetComponent<Terminator>().energy.CurrentValue += energyGain;
         }
+
+        // CHEAT TO REMOVE
+
+        if (Input.GetKeyDown(KeyCode.KeypadPlus))
+        {
+            Terminator.GetTerminator().energy.CurrentValue = 100;
+        }
 	}
 
     private void CheckRollingFaceRate()
