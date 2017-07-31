@@ -4628,8 +4628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp:
-    currentValue: 1000
-    maxValue: 1000
+    currentValue: 700
+    maxValue: 700
   runningDrainPerSec: 10
   energy:
     currentValue: 100
