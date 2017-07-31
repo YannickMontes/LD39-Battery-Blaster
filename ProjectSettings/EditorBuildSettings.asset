@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 6a378aa043a723246a4b1a0f4078a5c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Warning/Scenes/Protype1.unity
     guid: 626b21ebcd467b149bdaf983bc150bea
+  - enabled: 1
+    path: Assets/Warning/Scenes/LDTest.unity
+    guid: bec5c3aac5cba4d4a8d5abe8b4bfa179
