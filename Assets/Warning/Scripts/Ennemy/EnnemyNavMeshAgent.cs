@@ -13,6 +13,7 @@ public class EnnemyNavMeshAgent : MonoBehaviour {
 	void Start () {
         move = true;
         agent = GetComponent<NavMeshAgent>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame

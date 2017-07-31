@@ -95,7 +95,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 3
+    agentRadius: 2.5
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -103,7 +103,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 1
+    cellSize: 0.8333333
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 1
@@ -1743,7 +1743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &127269101
 Transform:
   m_ObjectHideFlags: 0
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 2
@@ -4134,7 +4134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 7
@@ -6288,7 +6288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 3
@@ -7507,7 +7507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 1
@@ -7526,7 +7526,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1894599445}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &583523833
 GameObject:
@@ -13333,7 +13333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1051901962
 Transform:
   m_ObjectHideFlags: 0
@@ -15007,7 +15007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 5
@@ -15625,7 +15625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 2
@@ -16286,7 +16286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1894599445}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1316629706
 MonoBehaviour:
@@ -21002,7 +21002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 10
@@ -21274,7 +21274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 5
@@ -22121,7 +22121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad0cbe4eb9ef3314ba9d77e0dfb0ebba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemy: {fileID: 1393453945437928, guid: e5ec247bf9fe9ef4e9624ed3629a1c42, type: 2}
+  ennemy: {fileID: 1104949997642606, guid: a4fcedd9942703542b3d24127a60dcfc, type: 2}
   doorKeeper: {fileID: 1361175195}
   canGenerate: 0
   maxGeneration: 1
@@ -22140,7 +22140,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1894599445}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1776851660
 GameObject:
@@ -24184,9 +24184,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1316629705}
   - {fileID: 1774698439}
   - {fileID: 580839199}
-  - {fileID: 1316629705}
   - {fileID: 262328868}
   - {fileID: 1210086998}
   - {fileID: 509496017}
