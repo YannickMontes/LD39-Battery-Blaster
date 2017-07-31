@@ -822,6 +822,7 @@ GameObject:
   - component: {fileID: 114065167070079180}
   - component: {fileID: 114085584942673636}
   - component: {fileID: 114799124129442278}
+  - component: {fileID: 114523572460266922}
   m_Layer: 9
   m_Name: Skullfurher
   m_TagString: Untagged
@@ -3407,6 +3408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  stopChase: 0
 --- !u!114 &114154598315122708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3454,6 +3456,18 @@ MonoBehaviour:
   finalDestination: {fileID: 0}
   navMeshAgent: {fileID: 114121661097637658}
   invulnerable: 1
+--- !u!114 &114523572460266922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860054591367158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb8d61ecaba2c6468d5337e8306afc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigBossAgent: {fileID: 114121661097637658}
 --- !u!114 &114640930181937318
 MonoBehaviour:
   m_ObjectHideFlags: 1
