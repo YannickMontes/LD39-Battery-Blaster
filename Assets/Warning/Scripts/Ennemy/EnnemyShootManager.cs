@@ -52,7 +52,7 @@ public class EnnemyShootManager : MonoBehaviour {
 		shadowPosition = PlayerShadow.GetShadow ().transform.position;
 
 		Vector3 aim = shadowPosition - this.transform.position;
-		if (Physics.Raycast (this.transform.position, aim , out hitPoint, range)) {
+		if (Physics.Raycast (this.transform.position, aim , out hitPoint, range, ~(1<<9))) {
 			Target target = hitPoint.transform.GetComponent<Target> ();
 			//Debug.Log (hitPoint.transform.position + " " + hitPoint.transform.name);
 			Debug.DrawRay (this.transform.position, aim, Color.green);
