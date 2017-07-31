@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerShadow : MonoBehaviour {
 
 	private Transform player;
-
-	public int moveSpeed = 5;
+	public UnityStandardAssets.Characters.FirstPerson.FirstPersonController controller;
 	public float distanceToPlayer = 0.0f;
 	public bool onlyChase;
 	private bool isChasing;
 	static PlayerShadow PlayerShadowCurrent;
-
+	private float moveSpeed;
 	private int direction;
+	public float maxDistance = 10.0f;
 
 	private Vector3 destination;
 
@@ -30,7 +30,6 @@ public class PlayerShadow : MonoBehaviour {
 	void Update ()
 	{
 		CheckForPlayer();
-
 		Move();
 	}
 
@@ -41,6 +40,7 @@ public class PlayerShadow : MonoBehaviour {
 
 	private void Move()
 	{
+		moveSpeed = controller.speed-1;
 		Vector3 moving;
 		if (isChasing || onlyChase)
 			moving = Chase();
@@ -49,12 +49,18 @@ public class PlayerShadow : MonoBehaviour {
 		this.LookAtDirection(moving, 1.0f);
 		if (Vector3.Distance(player.position, this.transform.position) > distanceToPlayer)
 		{
-			this.GetComponent<Rigidbody>().MovePosition(transform.position + (moving * Time.deltaTime * moveSpeed));
+			transform.position += (moving * Time.deltaTime * moveSpeed);
 		}
 		else
 		{
 			this.GetComponent<Rigidbody>().velocity = Vector3.zero;
 		}
+	
+
+		if (Vector3.Distance (player.position, this.transform.position) > maxDistance) {
+			moveSpeed*=2;
+		}
+
 	}
 
 	private Vector3 MoveNormaly()

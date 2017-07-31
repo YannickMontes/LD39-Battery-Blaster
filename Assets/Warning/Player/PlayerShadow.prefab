@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4280416103961398}
   - component: {fileID: 114671228250074162}
-  - component: {fileID: 54960783035868084}
-  - component: {fileID: 65653853281809188}
   m_Layer: 0
   m_Name: PlayerShadow
   m_TagString: Untagged
@@ -42,33 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &54960783035868084
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1767072958887066}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 116
-  m_CollisionDetection: 0
---- !u!65 &65653853281809188
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1767072958887066}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114671228250074162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e7d1f83e6b9e84db6eeb6eea693ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  controller: {fileID: 0}
   distanceToPlayer: 0
-  onlyChase: 0
+  onlyChase: 1
+  maxDistance: 7
