@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GrenadeExplosion : MonoBehaviour {
 	public float grenadeExplosiveDelay = 2.0f;
-	public float radius = 5.0f;
-	public float damage = 50f;
+	public float radius = 30.0f;
+
+	public float damageMax = 1f;
 
 	public GameObject impactEffect;
 
@@ -32,6 +33,7 @@ public class GrenadeExplosion : MonoBehaviour {
 				col.GetComponent<Rigidbody>().AddExplosionForce (grenadeExplosivePower, transform.position, radius, 1.0f);
 				Target target = col.gameObject.GetComponent<Target> ();
 				if (target != null) {
+					float damage = Mathf.Clamp(radius-Vector3.Distance (this.transform.position, target.transform.position),0,radius);
 					target.TakeDamage (damage);
 				}
 					Destroy (gameObject);
