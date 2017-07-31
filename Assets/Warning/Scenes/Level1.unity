@@ -453,6 +453,31 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114110647683675538, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: minSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114110647683675538, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658720793392140, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: minSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658720793392140, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658720793392140, guid: ba15113969aa1284db6d3220d249f433,
+        type: 2}
+      propertyPath: maxRectsOnScreen
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ba15113969aa1284db6d3220d249f433, type: 2}
   m_IsPrefabParent: 0
@@ -1182,6 +1207,8 @@ Transform:
   - {fileID: 330703249}
   - {fileID: 1107561097}
   - {fileID: 1030131453}
+  - {fileID: 787839449}
+  - {fileID: 1563580105}
   m_Father: {fileID: 1139545624}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2523,8 +2550,8 @@ GameObject:
   - component: {fileID: 145643977}
   - component: {fileID: 145643976}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2555,7 +2582,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3128,7 +3155,7 @@ GameObject:
   - component: {fileID: 210618589}
   m_Layer: 0
   m_Name: Door 3
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3161,7 +3188,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6689,7 +6716,7 @@ GameObject:
   - component: {fileID: 445678391}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6722,7 +6749,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7874,8 +7901,8 @@ GameObject:
   - component: {fileID: 517316989}
   - component: {fileID: 517316988}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8706,7 +8733,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9033,7 +9060,7 @@ GameObject:
   - component: {fileID: 575979279}
   m_Layer: 0
   m_Name: Door 2
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9066,7 +9093,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10528,7 +10555,7 @@ GameObject:
   - component: {fileID: 687829806}
   m_Layer: 0
   m_Name: Door 2
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10561,7 +10588,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12005,6 +12032,65 @@ MonoBehaviour:
   beginTime: 1
   currentGeneration: 0
   spawnDelay: 1
+--- !u!1001 &787839448
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 67840801}
+    m_Modifications:
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -27.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.9141209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.9141209
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740214374123488, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_Name
+      value: Blue Sphere (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &787839449 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6,
+    type: 2}
+  m_PrefabInternal: {fileID: 787839448}
 --- !u!1 &796402024
 GameObject:
   m_ObjectHideFlags: 0
@@ -13127,7 +13213,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 194
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.y
@@ -13135,7 +13221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 148.1
       objectReference: {fileID: 0}
     - target: {fileID: 4437930798804504, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
       propertyPath: m_LocalRotation.x
@@ -13162,6 +13248,21 @@ Prefab:
       propertyPath: reloadingUI
       value: 
       objectReference: {fileID: 1709030225}
+    - target: {fileID: 114711218809862774, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: energy.currentValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114711218809862774, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: energy.maxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845226302828788, guid: f2bcd1fbe8022c74e800cd3536249272,
+        type: 2}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2bcd1fbe8022c74e800cd3536249272, type: 2}
   m_IsPrefabParent: 0
@@ -16013,7 +16114,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17750,6 +17851,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 4125921276212364, guid: 9263198be5275954e94140613ce91d13, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9263198be5275954e94140613ce91d13, type: 2}
   m_IsPrefabParent: 0
@@ -18380,7 +18485,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18738,8 +18843,8 @@ GameObject:
   - component: {fileID: 1212917960}
   - component: {fileID: 1212917959}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18770,7 +18875,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20756,7 +20861,7 @@ GameObject:
   - component: {fileID: 1345313501}
   m_Layer: 0
   m_Name: Door 1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20789,7 +20894,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22566,8 +22671,8 @@ GameObject:
   - component: {fileID: 1436634725}
   - component: {fileID: 1436634724}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23509,7 +23614,7 @@ GameObject:
   - component: {fileID: 1490900609}
   m_Layer: 0
   m_Name: Door 3
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23542,7 +23647,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23683,7 +23788,7 @@ GameObject:
   - component: {fileID: 1501543836}
   m_Layer: 0
   m_Name: Door (2)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23716,7 +23821,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24859,6 +24964,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1562584667}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1563580104
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 67840801}
+    m_Modifications:
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 12.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.9141209
+      objectReference: {fileID: 0}
+    - target: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.9141209
+      objectReference: {fileID: 0}
+    - target: {fileID: 1740214374123488, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+      propertyPath: m_Name
+      value: Blue Sphere (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a730771e3615b394591b6ac45b491ca6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1563580105 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4195305865033628, guid: a730771e3615b394591b6ac45b491ca6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1563580104}
 --- !u!1 &1574339306
 GameObject:
   m_ObjectHideFlags: 0
@@ -26563,7 +26727,7 @@ GameObject:
   - component: {fileID: 1713926475}
   m_Layer: 0
   m_Name: Door (1)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26596,7 +26760,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26648,8 +26812,8 @@ GameObject:
   - component: {fileID: 1715437974}
   - component: {fileID: 1715437973}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27419,8 +27583,8 @@ GameObject:
   - component: {fileID: 1756628347}
   - component: {fileID: 1756628346}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27451,7 +27615,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31840,6 +32004,10 @@ Prefab:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4140975980024916, guid: d71b90f7a786268499ff6e077d418464, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d71b90f7a786268499ff6e077d418464, type: 2}
   m_IsPrefabParent: 0
@@ -32404,7 +32572,7 @@ GameObject:
   - component: {fileID: 2052375129}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32437,7 +32605,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6770b4333999cbd41b617566f68428b2, type: 2}
+  - {fileID: 2100000, guid: 7bb5f7192b90adf48a281b1dfaf99483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
