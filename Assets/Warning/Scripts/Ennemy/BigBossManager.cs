@@ -10,6 +10,8 @@ public class BigBossManager : MonoBehaviour {
 	public Target SG2;
 	public Target SG3;
     public GameObject shield;
+    public Transform finalDestination;
+    public EnnemyNavMeshAgent navMeshAgent;
 
 
 	bool shield1 = true;
@@ -50,6 +52,7 @@ public class BigBossManager : MonoBehaviour {
 			invulnerable = false;
             if (shield != null)
                 Destroy(shield);
+            navMeshAgent.target = finalDestination;
 		}
 	}
 

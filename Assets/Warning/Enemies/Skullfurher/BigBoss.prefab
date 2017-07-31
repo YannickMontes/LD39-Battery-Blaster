@@ -3389,6 +3389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtMainCamera: 1
+  onlyDirection: 0
   target: {fileID: 0}
 --- !u!114 &114209936617194954
 MonoBehaviour:
@@ -3420,6 +3421,8 @@ MonoBehaviour:
   SG2: {fileID: 0}
   SG3: {fileID: 0}
   shield: {fileID: 1777599543694946}
+  finalDestination: {fileID: 0}
+  navMeshAgent: {fileID: 114121661097637658}
   invulnerable: 1
 --- !u!114 &114640930181937318
 MonoBehaviour:
@@ -3433,6 +3436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtMainCamera: 0
+  onlyDirection: 0
   target: {fileID: 0}
 --- !u!135 &135905838135156736
 SphereCollider:

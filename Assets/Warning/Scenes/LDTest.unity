@@ -14910,6 +14910,11 @@ Prefab:
       propertyPath: SG3
       value: 
       objectReference: {fileID: 1698266948}
+    - target: {fileID: 114366946107942434, guid: e8bf156b1a4d7cf44804afe9e298227c,
+        type: 2}
+      propertyPath: finalDestination
+      value: 
+      objectReference: {fileID: 1137641526}
     - target: {fileID: 114640930181937318, guid: e8bf156b1a4d7cf44804afe9e298227c,
         type: 2}
       propertyPath: target
@@ -20593,6 +20598,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1135997021}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1137641525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1137641526}
+  m_Layer: 0
+  m_Name: FinalDestination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1137641526
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1137641525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -46.3, y: 0, z: 43.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2047208352}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1138382837
 GameObject:
   m_ObjectHideFlags: 0
@@ -37182,6 +37215,7 @@ Transform:
   - {fileID: 1142983870}
   - {fileID: 1443746246}
   - {fileID: 1826397836}
+  - {fileID: 1137641526}
   m_Father: {fileID: 51656661}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
