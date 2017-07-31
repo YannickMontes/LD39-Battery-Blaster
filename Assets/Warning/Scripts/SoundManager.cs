@@ -33,7 +33,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void playGBlasterLoad(){
-		RandomizeSfx (efxGBlasterLoadSource);
+		efxGBlasterLoadSource.Play();
 	}
 
 	public void stopGBlasterLoad(){
@@ -41,7 +41,7 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void playGBlasterShoot(){
-		RandomizeSfx (efxGBlasterShootSource);
+		efxGBlasterShootSource.Play();
 	}
 
 	public void RandomizeSfx(AudioSource clip){
