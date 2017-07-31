@@ -422,7 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aef487c7a90a3a4eaad8bc75512587f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 500
   isBoss: 0
   isPlayer: 0
-  boomParticlesEffectPrefab: {fileID: 0}
+  boomParticlesEffectPrefab: {fileID: 1680058025826580, guid: 2bb96be27f1d5d94c8b8310d673b4670,
+    type: 2}
