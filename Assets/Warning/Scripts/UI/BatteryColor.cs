@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BatteryColor : MonoBehaviour {
 
+    public Transform lowBattery;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,10 +18,12 @@ public class BatteryColor : MonoBehaviour {
         if (Terminator.GetTerminator().energy.CurrentValue <= 30)
         {
             this.GetComponent<Image>().color = new Color(1.0f, 0.0f, 0.0f);
+            lowBattery.gameObject.SetActive(true);
         }
         else
         {
             this.GetComponent<Image>().color = new Color(0.0f, 1.0f, 0.0f);
+            lowBattery.gameObject.SetActive(false);
         }
     }
 }

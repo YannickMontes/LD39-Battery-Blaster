@@ -25,13 +25,13 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!gIsDown && Input.GetKeyDown(KeyCode.G))
+        if (!gIsDown && Input.GetKeyDown(KeyCode.Alpha1))
         {
             gIsDown = true;
             key1.color = lowAlpha;
             key2.color = highAlpha;
         }
-        else if (gIsDown && Input.GetKeyDown(KeyCode.H))
+        else if (gIsDown && Input.GetKeyDown(KeyCode.Alpha3))
         {
             gIsDown = false;
             this.gameObject.GetComponent<Terminator>().energy.CurrentValue += energyGain;
