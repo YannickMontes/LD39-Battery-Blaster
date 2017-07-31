@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 4201961683913838}
   - component: {fileID: 195194693594381428}
   - component: {fileID: 114121661097637658}
+  - component: {fileID: 65296003829796550}
   m_Layer: 0
   m_Name: BigBossAgent
   m_TagString: Untagged
@@ -783,6 +784,8 @@ GameObject:
   - component: {fileID: 114640930181937318}
   - component: {fileID: 54995270161912678}
   - component: {fileID: 114209936617194954}
+  - component: {fileID: 65322654400927836}
+  - component: {fileID: 114366946107942434}
   m_Layer: 0
   m_Name: Skullfurher
   m_TagString: Untagged
@@ -909,7 +912,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1081317080892262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.616025, y: -6.6496897, z: -26.798569}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4741002258818894}
@@ -1108,7 +1111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860054591367158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.616025, y: -2.1496897, z: -39.10857}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4379464049009952}
@@ -1422,7 +1425,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1110230223953002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.616025, y: 6.6496897, z: 1.7285686}
+  m_LocalPosition: {x: -150, y: 0, z: 210}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4201961683913838}
@@ -2404,7 +2407,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7c5aedfe8acbdc646b9cd0ebed25799d, type: 2}
+  - {fileID: 2100000, guid: 6980bf27fc2a2984697c1801154102d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3187,6 +3190,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!65 &65296003829796550
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1081317080892262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!65 &65322654400927836
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860054591367158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95500907283186038
 Animator:
   serializedVersion: 3
@@ -3241,8 +3268,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4201961683913838}
-  moveSpeed: 10
+  moveSpeed: 25
   distanceToAgent: 7
+--- !u!114 &114366946107942434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1860054591367158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50cac663fe498740a72d77160631581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePoints: 200
+  SG1: {fileID: 0}
+  SG2: {fileID: 0}
+  SG3: {fileID: 0}
+  invulnerable: 1
 --- !u!114 &114640930181937318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3265,11 +3308,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 25
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
