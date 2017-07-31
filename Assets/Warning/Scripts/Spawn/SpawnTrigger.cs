@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpawnTrigger : MonoBehaviour {
 
-    public EnnemySpawner[] ennemySpawner;
     public DoorKeeper doors;
 
 	// Use this for initialization
@@ -21,11 +20,16 @@ public class SpawnTrigger : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            for (int i = 0; i < ennemySpawner.Length; i++)
+            for (int i = 0; i < this.transform.childCount; i++)
             {
-                ennemySpawner[i].TurnGenerateOn();
+                EnnemySpawner spawner = this.transform.GetChild(i).GetComponent<EnnemySpawner>();
+                spawner.doorKeeper = doors;
+                spawner.TurnGenerateOn();
             }
-            doors.gameObject.SetActive(true);
+            if (doors != null)
+            {
+                doors.gameObject.SetActive(true);
+            }
         }
     }
 }

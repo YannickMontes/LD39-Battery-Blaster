@@ -3315,8 +3315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4201961683913838}
-  moveSpeed: 25
-  distanceToAgent: 7
+  moveSpeed: 15
+  distanceToAgent: 2
 --- !u!114 &114366946107942434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3355,7 +3355,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 25
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4302854369812184}
   - component: {fileID: 33443602003679672}
   - component: {fileID: 23279110197169684}
+  - component: {fileID: 65810338991413742}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -256,6 +257,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.6938305, y: 5.693832, z: 7.426877}
   m_Center: {x: 0, y: 0, z: 2.1708531}
+--- !u!65 &65810338991413742
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1140948715617740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.2, y: 2.4000006, z: 2.3613405}
+  m_Center: {x: 0, y: -0.0000038146973, z: 0.18067011}
 --- !u!95 &95586909038328446
 Animator:
   serializedVersion: 3
@@ -409,6 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aef487c7a90a3a4eaad8bc75512587f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 500
+  health: 20
   isBoss: 0
+  isPlayer: 0
   boomParticlesEffectPrefab: {fileID: 0}

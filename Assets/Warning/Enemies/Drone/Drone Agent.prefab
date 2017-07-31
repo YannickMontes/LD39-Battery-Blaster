@@ -1200,8 +1200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4335818932802430}
-  moveSpeed: 5
-  distanceToAgent: 7
+  moveSpeed: 10
+  distanceToAgent: 1
 --- !u!114 &114266981569222802
 MonoBehaviour:
   m_ObjectHideFlags: 1
