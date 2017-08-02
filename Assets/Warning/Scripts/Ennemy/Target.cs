@@ -42,7 +42,7 @@ public class Target : MonoBehaviour {
         {
             shootManager.DestroyParticles();
         }
-        if (this.transform.parent != null)
+        if (this.transform.parent != null && this.gameObject.tag != "Objective")
             Destroy(gameObject.transform.parent.gameObject);
         else
             Destroy(gameObject);

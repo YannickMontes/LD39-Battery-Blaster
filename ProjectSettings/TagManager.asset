@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ennemy
   - Door
+  - Objective
   layers:
   - Default
   - TransparentFX
