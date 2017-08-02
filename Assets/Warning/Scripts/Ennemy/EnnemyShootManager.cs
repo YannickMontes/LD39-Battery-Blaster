@@ -64,9 +64,11 @@ public class EnnemyShootManager : MonoBehaviour {
 			}
 					//player screen shaken
 		}
-
-
-
-
 	}
+
+    public void DestroyParticles()
+    {
+        Destroy(this.flash_L.gameObject);
+        Destroy(this.flash_R.gameObject);
+    }
 }

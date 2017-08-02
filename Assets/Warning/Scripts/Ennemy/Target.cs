@@ -37,7 +37,15 @@ public class Target : MonoBehaviour {
             boom.transform.position = transform.position;
             Destroy(boom, 3f);
         }
-        Destroy (gameObject);
+        EnnemyShootManager shootManager = this.GetComponent<EnnemyShootManager>();
+        if (shootManager != null)
+        {
+            shootManager.DestroyParticles();
+        }
+        if (this.transform.parent != null)
+            Destroy(gameObject.transform.parent.gameObject);
+        else
+            Destroy(gameObject);
 	}
 
     public void SetDoorKeeper(DoorKeeper door)
