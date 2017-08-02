@@ -37,7 +37,7 @@ public class EnnemySpawner : MonoBehaviour {
             {
                 GameObject en = Instantiate(ennemy, new Vector3(this.transform.position.x, 0.0f, this.transform.position.z), Quaternion.identity);
                 Transform drone = en.transform.Find("Drone");
-                drone.localPosition = Vector3.up * Random.Range(1.5f, 8.0f);
+                drone.localPosition = Vector3.up * Random.Range(1.5f, 6.0f);
                 drone.GetComponent<Target>().SetDoorKeeper(this.doorKeeper);
                 AddSpawnedEnnemyToDoorKeeper(drone.gameObject);
             }
