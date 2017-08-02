@@ -5,30 +5,30 @@ using UnityEngine;
 public class DoorColliding : MonoBehaviour {
 
     public EnnemyNavMeshAgent bigBossAgent;
+    public GameObject door;
 
 	// Use this for initialization
 	void Start () {
-		
+        door = null;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
-
-    public void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.tag == "Door")
+        if (door == null || !door.activeInHierarchy)
         {
-            bigBossAgent.target = collision.collider.transform;
+            bigBossAgent.target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        }
+        else
+        {
+            bigBossAgent.target = door.transform;
         }
     }
 
-    public void OnCollisionExit(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.tag == "Door")
         {
-            bigBossAgent.target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            door = collision.collider.gameObject;
         }
     }
 }
